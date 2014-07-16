@@ -1,0 +1,69 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage[british]{babel}
+\usepackage[hyphens]{url}
+\usepackage[pdftex,colorlinks=true]{hyperref}
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Ten(?) Top Tips for Benchmarking Research Software}
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{\IEEEauthorblockN{Tom Crick}
+\IEEEauthorblockA{Department of Computing\\
+Cardiff Metropolitan University\\
+Cardiff, UK\\
+Email: {\url{tcrick@cardiffmet.ac.uk}}}
+\and
+\IEEEauthorblockN{Samin Ishtiaq}
+\IEEEauthorblockA{Microsoft Research\\
+Cambridge, UK\\
+Email: {\url{samin.ishtiaq@microsoft.com}}}}
+
+\maketitle
+
+\begin{abstract}
+Abstract here...
+\end{abstract}
+
+\IEEEpeerreviewmaketitle
+
+\section{Introduction}
+Intro...
+
+\section{Top Tips}
+N.B. The ``rules'' should make reference to how this would improve the reusability of software that implemented the c.10 points...
+
+Cite~\cite{collberg-et-al:2014}
+
+\begin{itemize}
+\item the code should have an appropriate open source license (recommendations?)
+\item the code should be available on github or similar source control/repo?
+\item you should provide the compiler and build toolchain
+\item you should provide builds tools/makefiles/ant/etc and build instructions
+\item you should list/link to all non-standard packages/libraries/APIs
+\item main proposal: automatic online dependency/build/traffic light system with github hooks?
+\item case studies: CS, systems biology?
+\end{itemize}
+
+\section{Conclusion}
+Conclusions...
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{37}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% BibTeX users
+\bibliographystyle{IEEEtran}      % basic style, author-year citations
+\bibliography{wssspe2}   % name your BibTeX data base
+
+\end{document}
