@@ -35,18 +35,39 @@ Abstract here...
 \section{Introduction}
 Intro...
 
-Three rants:
+If we want to be truthful about it, then the Scientific Literature
+about software tools (CAV Tool papers, Nature Method(?) papers, etc)
+are not doing Science themselves. We're not saying all the papers are
+like this, but a typical paper, if you peer beneath the shiny \LaTeX
+and seemingly statistical tables of figures, is this:
 
-1. Your algorithm should be implementable by someone else.
+\begin{enumerate}
 
-2. Your tool should always be compile-able and runnable. 
+\item The reader cannot re-implement the paper's
+  algorithm. Reproducibility is a basic tenet of good Science. Many
+  algorithms described in premier scientific/adademic conferences
+  cannot be re-implemented, often because because the description
+  lacks sufficient detail and reasoing about why something was done
+  one way or another.
 
-3. The benchmarks you are running on should be relevant. 
+\item The tool that the paper describes either doesn't exist for
+  download. Or runs only one one particular platform. Or might run for
+  the author, for a while, but will bot-rot so soon that even the
+  author cannot compile it in two months time.
 
+\item The benchmarks the tool describes are fashioned only for this
+  instance of this time. They might claim to be from the Windows
+  device driver set, but the reality is that they are are stripped
+  down versions of the originals. Stripped down so much as to be
+  useless to anyone but the author vs the referee. It's worst than
+  that really: enough benchmarks are included to beat other tools. The
+  comparisons are never fair. (Neither are other peoples' comparisons
+  against your tool.) If every paper has to be novel, then every
+  benchmark, too, will be novel; there is no historical truth in new,
+  crafted benchmarks.
+\end{enumerate}
 
-Your algorithm that I can't implement becuase your description lacks sufficient detail and reasoing about why something was done one way or another. 
-Your tool that you talk of either doesn't exist for download. Or runs only one one particular platform. Or might run for you, right now, but will bot-rot in 2 months and, even you, cannot get it to compile again. 
-Your benchmarks claim to be from the Windows device driver samples or something similar, but are stripped down versions of the originals. Stripped down so much as to be useless to anyone but you vs the referee. 
+Things can be much better. 
 
 \section{Top Tips}
 N.B. The ``rules'' should make reference to how this would improve the reusability of software that implemented the c.10 points...
