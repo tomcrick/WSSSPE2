@@ -19,6 +19,11 @@ Cardiff Metropolitan University\\
 Cardiff, UK\\
 Email: {\url{tcrick@cardiffmet.ac.uk}}}
 \and
+\IEEEauthorblockN{Benjamin A Hall}
+\IEEEauthorblockA{Microsoft Research\\
+Cambridge, UK\\
+Email: {\url{benhall@microsoft.com}}}}
+\and
 \IEEEauthorblockN{Samin Ishtiaq}
 \IEEEauthorblockA{Microsoft Research\\
 Cambridge, UK\\
@@ -69,18 +74,34 @@ and seemingly statistical tables of figures, is this:
 
 Things can be much better. 
 
+These things present a barrier to scientific software reliability:
+\begin{itemize}
+\item the pressure to ``make the discovery'' and publish quickly discincentizes careful software development
+\item software development is hard, but sharing and using others code is relatively easy. Code developing groups may wish to hold onto their code as a competitive advantage, especially if there exist larger competitors who could use the available code to ``reverse scoop'' and lead into a promising new area opened by someone else. unshared code is untestable\cdots
+\item testing new scientific software is difficult, as until the software is complete unit tests may not be available
+\item some models may be chaotic and influenced by floating point errors (e.g. molecular dynamics), further frustrating testing
+\item some scientists may not have had any formal/informal training in programming, and even a basic introduction may improve the software \url{http://philipwfowler.wordpress.com/2013/12/19/the-oxford-software-carpentry-boot-camp-one-year-on/}
+\end{itemize}
+
 \section{Top Tips}
 N.B. The ``rules'' should make reference to how this would improve the reusability of software that implemented the c.10 points...
 
 Cite~\cite{collberg-et-al:2014}
 
 \begin{itemize}
+\item scientist education \url{http://f1000research.com/articles/3-62/v1}
 \item the code should have an appropriate open source license (recommendations?)
 \item the code should be available on github or similar source control/repo?
+\item the code should include links to papers publishing individual algorithms
+\item the code should include explicit relationships to other projects on the repo (i.e. B was branched from A)
 \item you should provide the compiler and build toolchain
 \item you should provide builds tools/makefiles/ant/etc and build instructions
 \item you should list/link to all non-standard packages/libraries/APIs
+\item you should note the hardware and OS used
+\item you should include the models used for testing/benchmarking
+\item you could include an interface to the tool and a model in the web version of the paper, to demonstrate how it works i.e. make the paper ``executable'' eg Ben's retrodiction paper 
 \item main proposal: automatic online dependency/build/traffic light system with github hooks?
+\item more main proposal: a lineage of the software (history/branches) and a (more limited) lineage of the algorithm its built on
 \item case studies: CS, systems biology?
 \end{itemize}
 
