@@ -83,6 +83,7 @@ These things present a barrier to scientific software reliability:
 \item testing new scientific software is difficult, as until the software is complete unit tests may not be available
 \item some models may be chaotic and influenced by floating point errors (e.g. molecular dynamics), further frustrating testing. Example: Sidekick is an automated tool for building molecular models and performing simualations~\cite{Hall2014Sidekick}. Each system is simulated from an different initial random seed, and under most circumstances this is the only difference expected between replicas. However, on a mixed cluster with AMD and intel nodes, the difference in architecture was found to alter the number of water molecules added to each system by 1. This meant that the same simulation performed on different architectures would diverge. Similarly, in a different simulation engine, different neighbour searching strategies gave divergent simulations due to the differing order in which forces were summed.
 \item some scientists may not have had any formal/informal training in programming, and even a basic introduction may improve the software. Individuals leading the software carpentry workshop reported a large improvement in awareness and skills following the course \url{http://philipwfowler.wordpress.com/2013/12/19/the-oxford-software-carpentry-boot-camp-one-year-on/}
+\item licences may prohibit viewing the source, modifying, sharing, or even analysing software performance and behaviour e.g. GAUSSIAN~\cite{Giles2004}
 \end{itemize}
 
 \section{Top Tips}
