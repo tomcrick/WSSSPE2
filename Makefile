@@ -12,3 +12,6 @@ pdflatex = pdflatex -interaction=errorstopmode -halt-on-error
 
 clean:
 	rm -f $(targets) *.aux *.log *.nav *.out *.snm *.toc *.vrb *.bbl *.blg *.synctex.gz
+
+winopen: 
+	cmd start /c $(targets)

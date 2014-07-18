@@ -104,7 +104,8 @@ Cite~\cite{collberg-et-al:2014}
 \item you should list/link to all non-standard packages/libraries/APIs
 \item you should note the hardware and OS used
 \end{itemize}
-\item you should include the models used for testing/benchmarking, or (better) deposit the models in a standard format, in a standard repository e.g. the protein data bank (\url{http://www.pdb.org}) and Systems Biology Markup Language~\cite{Hucka2003,Chaouiya2013}.
+\item develop standard file formats which appropriately constrain the models. Example: qualitative networks and Boolean networks are standard types of biological formal model~\cite{Kauffman1969,Schaub2007}. They can be expressed in SMV, but this means that standard behaviours have to be hard coded for each variable, introducing the possibility for errors. In the BioModelAnalyzer~\cite{Benque2012}, the XML contains \emph{only} the modifiable parameters limiting the possibility for error.
+\item you should include the models used for testing/benchmarking, or (better) deposit the models in a standard format, in a standard repository e.g. the protein data bank (\url{http://www.pdb.org}) and Systems Biology Markup Language~\cite{Hucka2003,Chaouiya2013}. This would allow the models to be taken and easily analysed in alternative programs where available.
 \item you could include an interface to the tool and a model in the web version of the paper, to demonstrate how it works i.e. make the paper ``executable''. This would allow users who are not able to install necessary dependecies etc. to explore the model \cite{Hall2014} 
 \item main proposal: automatic online dependency/build/traffic light system with github hooks?
 \item more main proposal: a lineage of the software (history/branches) and a (more limited) lineage of the algorithm its built on
