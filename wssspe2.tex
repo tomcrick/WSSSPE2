@@ -46,86 +46,203 @@ done without software. But the software is often in the background.
 
 software needs to be maintainable and reuseable. But even more so for science, where reproducibility is the very essense of the methodology. 
 
+the pressure to ``make the discovery'' and publish quickly discincentizes careful software development.
+Releasing code might give your competitors an advantage. 
+
 If we want to be truthful about it, then the Scientific Literature
 about software tools (CAV Tool papers, Nature Tools and Method(?) papers, etc)
 are not doing Science themselves. We're not saying all the papers are
 like this, but a typical paper, if you peer beneath the shiny \LaTeX
 and seemingly statistical tables of figures, is this:
 
-\begin{enumerate}
-
-\item The reader cannot re-implement the paper's
-  algorithm. Reproducibility is a basic tenet of good Science. Many
-  algorithms described in premier scientific/adademic conferences
-  cannot be re-implemented, often because because the description
-  lacks sufficient detail and reasoing about why something was done
-  one way or another.
-
-  Recommendation: the paper must describe the algorithm in such a way
-  that it's implementable by a third party. We recommend that premier
-  scientific conferences have a special track for papers that
-  only re-implement past papers' algorithms/techniques/tools. 
-
-
-\item The tool that the paper describes either doesn't exist for
-  download. Or runs only one one particular platform. Or might run for
-  the author, for a while, but will bot-rot so soon that even the
-  author cannot compile it in two months time.
-
-  Ben's tweet: https://twitter.com/ianholmes/status/288689712636493824
-
-\item The benchmarks the tool describes are fashioned only for this
-  instance of this time. They might claim to be from the Windows
-  device driver set, but the reality is that they are are stripped
-  down versions of the originals. Stripped down so much as to be
-  useless to anyone but the author vs the referee. It's worst than
-  that really: enough benchmarks are included to beat other tools. The
-  comparisons are never fair. (Neither are other peoples' comparisons
-  against your tool.) If every paper has to be novel, then every
-  benchmark, too, will be novel; there is no historical truth in new,
-  crafted benchmarks.
-\end{enumerate}
-
 Things can be much better. 
 
-These things present a barrier to scientific software reliability:
-\begin{itemize}
-\item the pressure to ``make the discovery'' and publish quickly discincentizes careful software development
-\item software development is hard, but sharing and using others code is relatively easy. Code developing groups may wish to hold onto their code as a competitive advantage, especially if there exist larger competitors who could use the available code to ``reverse scoop'' and lead into a promising new area opened by someone else. unshared code is untestable $\cdots$
-\item testing new scientific software is difficult, as until the software is complete unit tests may not be available
-\item some models may be chaotic and influenced by floating point errors (e.g. molecular dynamics), further frustrating testing. Example: Sidekick is an automated tool for building molecular models and performing simualations~\cite{Hall2014Sidekick}. Each system is simulated from an different initial random seed, and under most circumstances this is the only difference expected between replicas. However, on a mixed cluster with AMD and intel nodes, the difference in architecture was found to alter the number of water molecules added to each system by 1. This meant that the same simulation performed on different architectures would diverge. Similarly, in a different simulation engine, different neighbour searching strategies gave divergent simulations due to the differing order in which forces were summed.
-\item some scientists may not have had any formal/informal training in programming, and even a basic introduction may improve the software. Individuals leading the software carpentry workshop reported a large improvement in awareness and skills following the course \url{http://philipwfowler.wordpress.com/2013/12/19/the-oxford-software-carpentry-boot-camp-one-year-on/}
-\item licences may prohibit viewing the source, modifying, sharing, or even analysing software performance and behaviour e.g. GAUSSIAN~\cite{Giles2004}
-\end{itemize}
 
-\section{Top Tips}
-N.B. The ``rules'' should make reference to how this would improve the reusability of software that implemented the c.10 points...
+
+Our `Top Tips'' follow. We hope that these improve the reusability of research ssoftware. 
+(N.B. The ``rules'' should
+make reference to how this would improve the reusability of software
+that implemented the c.10 points...)
 
 Cite~\cite{collberg-et-al:2014}
 
-\begin{itemize}
-\item scientist education~\cite{Wilson2014}. Even basic training can improve the habits of junior programmers, by introducing the concepts of revision control, unit tests etc
-\item use of high level language, with type checking (preferably units of measure). Agressive type checking avoids a subset of bugs which can arise due to incorrectly written functions e.g. well publicised NASA problems with a Mars orbiter (\url{http://www.cnn.com/TECH/space/9909/30/mars.metric.02/}). Problems found using in house software for crystallography lead to 5 retractions \cite{Miller2006}, that arose due to a bug which inverted the phases. A pressure coupling bug in GROMACS~\cite{Hess2008}, \url{http://redmine.gromacs.org/issues/14}, arose due to the inappropriate swapping of a pressure term with a stress tensor.
-\item the code should have an appropriate open source license (recommendations?). A wide variety of licenses exist for molecular dynamics software, with different degrees of openness (GROMACS=LGPL~\cite{Hess2008}, CHARMM/CHARMm and Desmond=Academic/Commercial software licences~\cite{Brooks2009,Bowers2006}, Amber and NAMD=custom open-like licence). Whilst the lack of an open licence is not necessarily a barrier to widespread adoption (e.g. GAUSSIAN), it facilitates testing and comparison, and promotes competition.
-\item the code should be available on github or similar source control/repo?
-\item the code should include links to papers publishing individual algorithms and the code should include explicit relationships to other projects on the repo (i.e. B was branched from A). This ensure that the researchers and software developers working upstream of the current project are properly credited, encouraging future sharing
-\item you should provide details of \emph{how} you built and wrote the software. All the below features can influence the behaviour of your software
-\begin{itemize}
-\item you should provide the compiler and build toolchain
-\item you should provide builds tools/makefiles/ant/etc and build instructions
-\item you should list/link to all non-standard packages/libraries/APIs
-\item you should note the hardware and OS used
-\end{itemize}
-\item develop standard file formats which appropriately constrain the models. Example: qualitative networks and Boolean networks are standard types of biological formal model~\cite{Kauffman1969,Schaub2007}. They can be expressed in SMV, but this means that standard behaviours have to be hard coded for each variable, introducing the possibility for errors. In the BioModelAnalyzer~\cite{Benque2012}, the XML contains \emph{only} the modifiable parameters limiting the possibility for error.
-\item you should include the models used for testing/benchmarking, or (better) deposit the models in a standard format, in a standard repository e.g. the protein data bank (\url{http://www.pdb.org}) and Systems Biology Markup Language~\cite{Hucka2003,Chaouiya2013}. This would allow the models to be taken and easily analysed in alternative programs where available.
-\item you could include an interface to the tool and a model in the web version of the paper, to demonstrate how it works i.e. make the paper ``executable''. This would allow users who are not able to install necessary dependecies etc. to explore the model \cite{Hall2014} 
-\item main proposal: automatic online dependency/build/traffic light system with github hooks?
-\item more main proposal: a lineage of the software (history/branches) and a (more limited) lineage of the algorithm its built on
-\item case studies: CS, systems biology?
-\end{itemize}
+
+\section{Can I implement your algorithm?}
+The reader cannot re-implement the paper's algorithm. Reproducibility
+is a basic tenet of good Science. Many algorithms described in premier
+scientific/adademic conferences cannot be re-implemented, often
+because because the description lacks sufficient detail and reasoing
+about why something was done one way or another.
+
+Recommendation: the paper must describe the algorithm in such a way
+that it's implementable by a third party. We recommend that premier
+scientific conferences have a special track for papers that only
+re-implement past papers' algorithms/techniques/tools.
+
+
+\section{Better programmers write better software}
+
+scientist education~\cite{Wilson2014}. Even basic training can improve
+the habits of junior programmers, by introducing the concepts of
+revision control, unit tests etc
+
+some scientists may not have had any formal/informal training in programming, and even a basic introduction may improve the software. Individuals leading the software carpentry workshop reported a large improvement in awareness and skills following the course \url{http://philipwfowler.wordpress.com/2013/12/19/the-oxford-software-carpentry-boot-camp-one-year-on/}
+
+
+\section{Better languages lead to better software} 
+
+use of high level language, with type checking (preferably units of
+measure). Agressive type checking avoids a subset of bugs which can
+arise due to incorrectly written functions e.g. well publicised NASA
+problems with a Mars orbiter
+(\url{http://www.cnn.com/TECH/space/9909/30/mars.metric.02/}). Problems
+found using in house software for crystallography lead to 5
+retractions \cite{Miller2006}, that arose due to a bug which inverted
+the phases. A pressure coupling bug in GROMACS~\cite{Hess2008},
+\url{http://redmine.gromacs.org/issues/14}, arose due to the
+inappropriate swapping of a pressure term with a stress tensor.
+
+\section{Set the code free} 
+
+software development is hard, but sharing and using others code is
+relatively easy. Code developing groups may wish to hold onto their
+code as a competitive advantage, especially if there exist larger
+competitors who could use the available code to ``reverse scoop'' and
+lead into a promising new area opened by someone else.
+
+the code should have an appropriate open source license
+(recommendations?). A wide variety of licenses exist for molecular
+dynamics software, with different degrees of openness (GROMACS=GPL,
+CHARMM/CHARMm and Desmond=Academic/Commercial software licences, Amber
+and NAMD=custom open-like licence).
+
+Whilst the lack of an open licence is not necessarily a barrier to
+widespread adoption (e.g. GAUSSIAN), it facilitates testing and
+comparison, and promotes competition.
+
+Z3 is another good example. The code is not open source, but providing
+the code under an academic license is much better than not providing
+the code at all.
+
+licences may prohibit viewing the source, modifying, sharing, or even analysing software performance and behaviour e.g. GAUSSIAN~\cite{Giles2004}
+
+the code should be available on github or similar source control/repo?
+
+\section{Test it to see}
+link from shared code... shared code is more test-able. 
+
+unshared code is untestable.  testing new scientific software is
+difficult, as until the software is complete unit tests may not be
+available
+
+some models may be chaotic and influenced by floating point errors
+(e.g. molecular dynamics), further frustrating testing. Example:
+Sidekick is an automated tool for building molecular models and
+performing simualations~\cite{Hall2014Sidekick}. Each system is
+simulated from an different initial random seed, and under most
+circumstances this is the only difference expected between
+replicas. However, on a mixed cluster with AMD and intel nodes, the
+difference in architecture was found to alter the number of water
+molecules added to each system by 1. This meant that the same
+simulation performed on different architectures would
+diverge. Similarly, in a different simulation engine, different
+neighbour searching strategies gave divergent simulations due to the
+differing order in which forces were summed.
+
+
+
+\section{Lineage} 
+
+the code should include links to papers publishing individual
+algorithms and the code should include explicit relationships to other
+projects on the repo (i.e. B was branched from A). This ensure that
+the researchers and software developers working upstream of the
+current project are properly credited, encouraging future sharing
+
+main proposal: automatic online dependency/build/traffic light system
+with github hooks?
+
+more main proposal: a lineage of the software (history/branches) and a
+(more limited) lineage of the algorithm its built on
+
+\section{Dead on arrival}
+
+\begin{quote}
+You can download our code from the URL supplied. Good luck downloading the only postdoc who can get it to run, though \# overlyhonestmethods
+
+\url{https://twitter.com/ianholmes/status/288689712636493824} 
+\end{quote}
+
+
+probably murdered before-hand. 
+
+The tool that the paper describes either doesn't exist for
+download. Or runs only one one particular platform. Or might run for
+the author, for a while, but will bot-rot so soon that even the author
+cannot compile it in two months time.
+
+
+
+you should provide details of \emph{how} you built and wrote the software. All the below features can influence the behaviour of your software
+
+you should provide the compiler and build toolchain
+
+you should provide builds tools/makefiles/ant/etc and build instructions
+
+you should list/link to all non-standard packages/libraries/APIs
+
+you should note the hardware and OS used
+
+
+\section{Form over function}
+
+develop standard file formats which appropriately constrain the
+models. Example: qualitative networks and Boolean networks are
+standard types of biological formal
+model~\cite{Kauffman1969,Schaub2007}. They can be expressed in SMV,
+but this means that standard behaviours have to be hard coded for each
+variable, introducing the possibility for errors. In the
+BioModelAnalyzer~\cite{Benque2012}, the XML contains \emph{only} the
+modifiable parameters limiting the possibility for error.
+
+
+\section{It runs fast on my benchmarks} 
+
+The benchmarks the tool describes are fashioned only for this instance
+of this time. They might claim to be from the Windows device driver
+set, but the reality is that they are are stripped down versions of
+the originals. Stripped down so much as to be useless to anyone but
+the author vs the referee. It's worst than that really: enough
+benchmarks are included to beat other tools. The comparisons are never
+fair. (Neither are other peoples' comparisons against your tool.) If
+every paper has to be novel, then every benchmark, too, will be novel;
+there is no historical truth in new, crafted benchmarks.
+
+
+Benchmarks should be public, they should be heavily curated (every
+test/assertion should be justified). Papers should be penalized if
+they don't use these public benchmarks.
+
+you should include the models used for testing/benchmarking, or
+(better) deposit the models in a standard format, in a standard
+repository e.g. the protein data bank (\url{http://www.pdb.org}) and
+Systems Biology Markup Language~\cite{Hucka2003,Chaouiya2013}. This
+would allow the models to be taken and easily analysed in alternative
+programs where available.
+
+\section{Welcome to the Web 2.0 guys, 10 years later} 
+
+you could include an interface to the tool and a model in the web
+version of the paper, to demonstrate how it works i.e. make the paper
+``executable''. This would allow users who are not able to install
+necessary dependecies etc. to explore the model \cite{Hall2014}
+
+
+
 
 \section{Conclusion}
-Conclusions...
+
+There's always an Intro and a Conclusion. 
 
 
 % trigger a \newpage just before the given reference
