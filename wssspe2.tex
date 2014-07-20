@@ -129,8 +129,8 @@ lead into a promising new area opened by someone else.
 
 the code should have an appropriate open source license
 (recommendations?). A wide variety of licenses exist for molecular
-dynamics software, with different degrees of openness (GROMACS=GPL,
-CHARMM/CHARMm and Desmond=Academic/Commercial software licences, Amber
+dynamics software, with different degrees of openness (GROMACS=LGPL~\cite{Hess2008}
+,CHARMM/CHARMm and Desmond=Academic/Commercial software licences~\cite{Brookes2009,Bowers2006}, Amber
 and NAMD=custom open-like licence).
 
 Whilst the lack of an open licence is not necessarily a barrier to
@@ -141,7 +141,8 @@ Z3 is another good example. The code is not open source, but providing
 the code under an academic license is much better than not providing
 the code at all.
 
-licences may prohibit viewing the source, modifying, sharing, or even analysing software performance and behaviour e.g. GAUSSIAN~\cite{Giles2004}
+licences may prohibit viewing the source, modifying, sharing, or even
+analysing software performance and behaviour e.g. GAUSSIAN~\cite{Giles2004}
 
 the code should be available on github or similar source control/repo?
 
@@ -254,7 +255,9 @@ version of the paper, to demonstrate how it works i.e. make the paper
 ``executable''. This would allow users who are not able to install
 necessary dependecies etc. to explore the model \cite{Hall2014}
 
-
+Virtual machines could make testing of scaling properties more simple. 
+Build a cluster of slow nodes in the cloud to demonstrate how well the
+software scales for parallel calculations
 
 
 \section{Conclusion}
