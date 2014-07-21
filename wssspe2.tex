@@ -302,18 +302,25 @@ make it easier; see Section~\ref{sec:Conclusion} at the end for more
 on this.
 
 
-\section{Form over function}
+\section{Forms of representation}
 
-ToDO 
 
-develop standard file formats which appropriately constrain the
-models. Example: qualitative networks and Boolean networks are
-standard types of biological formal
-model~\cite{Kauffman1969,Schaub2007}. They can be expressed in SMV,
-but this means that standard behaviours have to be hard coded for each
-variable, introducing the possibility for errors. In the
-BioModelAnalyzer~\cite{Benque2012}, the XML contains \emph{only} the
-modifiable parameters limiting the possibility for error.
+We often don't, and shouldn't care, how things are stored on disk,
+what their representations are. But a common, constrained, standard
+representation is good for passing tests or models around between
+different tools. A properly described representation, like the SMT-LIB
+format for SAT Modulo Theory solvers~\cite{smtlib}, where both the
+syntax and semantics are well understood, aids hugely in developing
+tools, techniques, benchmarks.
+
+Another example, from biology, is that of the standard representation
+of qualitative networks and Boolean
+networks~\cite{Kauffman1969,Schaub2007}.  These networks can be
+expressed in SMV format, but this would mean that standard QN and BN
+behaviours have to be hard coded for each variable, introducing the
+possibility for errors. In the BioModelAnalyzer
+tool~\cite{Benque2012}, the XML contains \emph{only} the modifiable
+parameters limiting the possibility for error.
 
 
 \section{9.63s} 
