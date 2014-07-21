@@ -3,6 +3,7 @@
 \usepackage[british]{babel}
 \usepackage[hyphens]{url}
 \usepackage{graphicx}
+\usepackage[noadjust]{cite}
 \usepackage[pdftex,colorlinks=true]{hyperref}
 
 \begin{document}
@@ -77,7 +78,9 @@ proposed~\cite{stodden-et-al:2013,fursin+dubach:2014}.  There are
 numerous non-technical impediments to making software maintainable and
 re-useable, too. The pressure to ``make the discovery'' and publish
 quickly disincentivises careful software development. Releasing
-code prematurely is often seen to give your competitors an advantage.
+code prematurely is often seen to give your competitors an
+advantage. But we should be shining light into ``black
+boxes''~\cite{morin-et-al:2012}.
 
 But things can and should be much better. In this short paper, we
 present a call to action with a small set of recommendations which we
@@ -141,16 +144,16 @@ that is available for browsing, modifying, and forking facilitates
 testing and comparison, and promotes competition.
 
 We recommend that code be published under an appropriate open source
-license; BSD and Apache are good, flexible ones.%, though IANAL.  
-A wide
-variety of licenses exist for molecular dynamics software, with
-different degrees of openness (GROMACS=LGPL~\cite{Hess2008}
-,CHARMM/CHARMm and Desmond=Academic/Commercial software
+license~\cite{osl}; BSD and Apache are good, flexible ones.%, though
+IANAL.  A wide variety of licenses exist for molecular dynamics
+software, with different degrees of openness
+(GROMACS=LGPL~\cite{Hess2008} ,CHARMM/CHARMm and
+Desmond=Academic/Commercial software
 licences~\cite{Brooks2009,Bowers2006}, Amber and NAMD=custom open-like
-licences). Z3 is an example from the verification area: the code itself
-is not open source, but the MSR-LA that allows the source code to be
-read, copied, forked for academic use, provides scholars in the field
-much more than before~\cite{deMoura2012Z3open}.
+licences). Z3 is an example from the verification area: the code
+itself is not open source, but the MSR-LA that allows the source code
+to be read, copied, forked for academic use, provides scholars in the
+field much more than before~\cite{deMoura2012Z3open}.
 
 Ultimately: set the code free. Put it on a place like GitHub, where it
 is easy to fork and share.
