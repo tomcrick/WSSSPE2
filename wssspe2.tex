@@ -158,8 +158,9 @@ that is available for browsing, modifying, and forking facilitates
 testing and comparison, and promotes competition.
 
 We recommend that code be published under an appropriate open source
-license~\cite{osl}; BSD and Apache are good, flexible ones.%, though
-IANAL.  A wide variety of licenses exist for molecular dynamics
+license~\cite{osl}; BSD and Apache are good, flexible ones.
+%, though IANAL.  
+A wide variety of licenses exist for molecular dynamics
 software, with different degrees of openness
 (GROMACS=LGPL~\cite{Hess2008} ,CHARMM/CHARMm and
 Desmond=Academic/Commercial software
@@ -206,7 +207,7 @@ as a core at undergraduate and postgraduate levels.
 
 There really is no other scientific or technical field where its
 participants can just make up a non-principled artefact like a
-programming language so easily. In a way, it says how much a
+programming language so easily. In a way, it says how much of a
 ``commons'' computer science is, that anyone and his dog can create a
 new programming language or frameowrk or compiler. This has
 advantages, and dis-advantages.
@@ -214,14 +215,16 @@ advantages, and dis-advantages.
 What is clear is that the use of a principled, high-level programming
 language to write your software in, helps hugely with the
 maintainability and robustness of the software. Such programming
-languages impose constraints like types: you can never add a number
-and a string is most basic example, but ML's functors provide
-princpled ways of plugging in components with their implementations
-completely hidden. Aggressive type checking avoids a subset of bugs
-which can arise due to incorrectly written functions e.g. well
-publicised NASA problems with a Mars orbiter
-(http://www.cnn.com/TECH/space/9909/30/mars.metric.02/).
-One example is a pressure coupling bug in GROMACS~\cite{Hess2008},
+languages impose constraints like types: that you can never add a
+number and a string is the most basic example, but ML's functors
+provide princpled ways of plugging in components with their
+implementations completely hidden. 
+
+Aggressive type checking avoids a subset of bugs which can arise due
+to incorrectly written functions e.g. well publicised NASA problems
+with a Mars orbiter
+(http://www.cnn.com/TECH/space/9909/30/mars.metric.02/).  One example
+is a pressure coupling bug in GROMACS~\cite{Hess2008},
 \url{http://redmine.gromacs.org/issues/14}, which arose due to the
 inappropriate swapping of a pressure term with a stress tensor.  A
 further extension of types, a concept called units of measure that is
@@ -313,9 +316,9 @@ you should list or link to all non-standard packages and libraries that you use;
 %
 you should note the hardware and OS used. 
 %
-This sounds like a lot of work, but GitHub APIs, CI, VMs and cloud can
-make it easier; see Section~\ref{sec:Conclusion} at the end for more
-on this.
+This sounds like a lot of work, but GitHub APIs, Continuous
+Integration servers, VMs and cloud can make it easier; see
+Section~\ref{sec:Conclusion} at the end for more on this.
 
 
 \section{Forms of representation}
@@ -392,6 +395,8 @@ VM spot market. The web is a great leveller.
 \section{Conclusion}
 \label{sec:Conclusion} 
 
+This is how we imagine the future. 
+
 Suppose you have come up with a better algorithm to deal with some
 standard problem.  You write up the paper on the algorithm, and you
 also push an C++ implementation of your algorithm to the WSSSPE
@@ -400,7 +405,7 @@ Cloud's section on this standard problem.
 The effect of pushing your implementation is to register your program
 as a possible competitor in this standard problem competition. There
 are several dozen widely-agreed tests on this problem already on the
-WSSSPE Cloud's database. Maybe, after some negotiation becaues your
+WSSSPE Cloud's database. Maybe, after some negotiation because your
 angle on this standard problem is a bit novel, you add some of your
 own tests to the database too. 
 
@@ -413,9 +418,10 @@ API) changes too.
 
 The proposal above brings together almost all of the points we've
 discussed in this paper. There are already several web services that
-nearly do this. Something more complete would mean that your code
-would never bit-rot, and no one would have problems reproducing the
-implementation of your published algorithm.
+nearly do this. Something more complete, and stamped with the
+authority of the major conferences or journals, would mean that your
+code would never bit-rot, and no one would have problems reproducing
+the implementation of your published algorithm.
 
 
 
