@@ -43,7 +43,7 @@ Abstract here...
 Marc Andreessen famously said in 2011 that ``software is eating the
 world''~\cite{andreessen:2011}. It's true: we clearly live in a
 computational world, with our everyday interactions, entertainment,
-books, shopping, keys, transportation, \dots\ heavily dependent on (or
+books, shopping, keys, transportation, \dots\ are all heavily dependent on (or
 replaced by) software.
 
 This is also true in science and engineering. A 2012 report by the
@@ -59,8 +59,9 @@ importantly, with reproducibility being a fundamental tenet of
 science, they need to be re-useable.
 
 However, if we want to be truthful about this, then the scientific
-literature related to software tools (***ref here? CAV Tool papers, or
-Nature Tools and Method(?)  papers, say) often don't appear to be
+literature related to software tools
+%Left out a ref which could cause problems
+often don't appear to be
 doing science themselves. How many of them are reproducible? How many
 explain their experimental methodologies, in particular the basis for
 their benchmarking? We, the authors, are as guilty as anyone in the
@@ -81,7 +82,7 @@ re-useable, too. The pressure to ``make the discovery'' and publish
 quickly disincentivises careful software development. Releasing
 code prematurely is often seen to give your competitors an advantage.
 
-But things can and should be much better. In this short paper, we
+Things can and should be much better. In this short paper, we
 present a small set of recommendations which we hope will lead to
 better, more sustainable, more re-useable software, to move towards an
 imagined future practice of software development and usage in science
@@ -135,7 +136,7 @@ inventors, and so to charge into a promising new area opened by the
 inventors.
 
 Closed source is one thing. Licenses that deny the user from viewing,
-modifying, or sharing the source are one thing. But there are even
+modifying, or sharing the source are one thing. There are however even
 licences on widely adopted tools like GAUSSIAN~\cite{Giles2004} that
 prohibit even analyzing software performance and behaviour.
  
@@ -145,12 +146,13 @@ that is available for browsing, modifying, and forking facilitates
 testing and comparison, and promotes competition.
 
 We recommend that code be published under an appropriate open source
-license; BSD and Apache are good, flexible ones, though IANAL.  A wide
+license; BSD and Apache are good, flexible ones.%, though IANAL.  
+A wide
 variety of licenses exist for molecular dynamics software, with
 different degrees of openness (GROMACS=LGPL~\cite{Hess2008}
 ,CHARMM/CHARMm and Desmond=Academic/Commercial software
 licences~\cite{Brooks2009,Bowers2006}, Amber and NAMD=custom open-like
-licence). Z3 is an example from the verification area: the code itself
+licences). Z3 is an example from the verification area: the code itself
 is not open source, but the MSR-LA that allows the source code to be
 read, copied, forked for academic use, provides scholars in the field
 much more than before~\cite{deMoura2012Z3open}.
