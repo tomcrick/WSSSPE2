@@ -43,7 +43,7 @@ Abstract here...
 Marc Andreessen famously said in 2011 that ``software is eating the
 world''~\cite{andreessen:2011}. It's true: we clearly live in a
 computational world, with our everyday interactions, entertainment,
-books, shopping, keys, transportation, \dots\ heavily dependent on (or
+books, shopping, keys, transportation, \dots\ are all heavily dependent on (or
 replaced by) software.
 
 This is also true in science and engineering. A 2012 report by the
@@ -59,15 +59,14 @@ importantly, with reproducibility being a fundamental tenet of
 science, they need to be re-useable.
 
 However, if we want to be truthful about this, then the scientific
-literature related to software tools (***ref here? CAV Tool papers, or
-Nature Tools and Method(?)  papers, say) often do not appear to be
+literature related to software tools often do not appear to be
 adhering to the rules themselves. There are numerous
 examples~\cite{beck-et-al:2005,prosser:2012}; how many of them are
 reproducible? How many explain their experimental methodologies, in
 particular the basis for their benchmarking? Can we build the
 code?~\cite{collberg-et-al:2014} We, the authors, are as guilty as
 anyone in the past, where we have succumbed to publishing
-papers~\cite{crick-et-al:2009, Berdine2011SLAyer} with benchmarks and
+papers~\cite{crick-et-al:2009,Berdine2011SLAyer} with benchmarks and
 promises of code to be released in the near future.
 
 There are many reasons why the wider scientific community is in this
@@ -77,7 +76,7 @@ with new models being
 proposed~\cite{stodden-et-al:2013,fursin+dubach:2014}.  There are
 numerous non-technical impediments to making software maintainable and
 re-useable, too. The pressure to ``make the discovery'' and publish
-quickly disincentivises careful software development. And releasing
+quickly disincentivises careful software development. Releasing
 code prematurely is often seen to give your competitors an advantage.
 
 But things can and should be much better. In this short paper, we
@@ -90,8 +89,8 @@ been previous work in this
 area~\cite{sim-et-al:2003,chirigati-et-al:2013}, as well as a range of
 manifestos for reproducible research and community initiatives, such
 as cTuning~\footnote{\url{http://ctuning.org/}} and the Recomputation
-Manifesto~\cite{gent:2013}~\footnote{\url{http://www.recomputation.org/}}, as well as
-recommendations on where to publish
+Manifesto~\cite{gent:2013}~\footnote{\url{http://www.recomputation.org/}},
+as well as recommendations on where to publish
 software~\footnote{\url{http://www.software.ac.uk/resources/guides/which-journals-should-i-publish-my-software}}.
 
 
@@ -116,14 +115,14 @@ past papers' algorithms, techniques, or tools.
 
 \section{Set the code free} 
 
-There can be no better proof that your algorithm works, then if you
+There can be no better proof that your algorithm works, than if you
 provide the source code of an implementation. Software development is
 hard, but sharing and using others code is relatively easy.
 
 A long time ago, Richard Stallman imagined that all code would be free
 and we'd make our money by consulting on the code.
 Surprisingly/amusingly, this is the case for a significant part of the
-computing industry now. But, of course, there are hard commercial
+computing industry now. There are, of course, hard commercial
 pressures for keeping code closed-source. Even in the scientific
 domain, scientists and their collaborators may wish to hold onto their
 code as a competitive advantage, especially if there exist larger
@@ -132,22 +131,23 @@ inventors, and so to charge into a promising new area opened by the
 inventors.
 
 Closed source is one thing. Licenses that deny the user from viewing,
-modifying, or sharing the source are one thing. But there are even
+modifying, or sharing the source are one thing. There are however even
 licences on widely adopted tools like GAUSSIAN~\cite{Giles2004} that
 prohibit even analyzing software performance and behaviour.
  
-But there is little doubt that, if science wants to be open and free,
+There is little doubt that, if science wants to be open and free,
 then the code that underlies it too wants to be open and free. Code
 that is available for browsing, modifying, and forking facilitates
 testing and comparison, and promotes competition.
 
 We recommend that code be published under an appropriate open source
-license; BSD and Apache are good, flexible ones, though IANAL.  A wide
+license; BSD and Apache are good, flexible ones.%, though IANAL.  
+A wide
 variety of licenses exist for molecular dynamics software, with
 different degrees of openness (GROMACS=LGPL~\cite{Hess2008}
 ,CHARMM/CHARMm and Desmond=Academic/Commercial software
 licences~\cite{Brooks2009,Bowers2006}, Amber and NAMD=custom open-like
-licence). Z3 is an example from the verification area: the code itself
+licences). Z3 is an example from the verification area: the code itself
 is not open source, but the MSR-LA that allows the source code to be
 read, copied, forked for academic use, provides scholars in the field
 much more than before~\cite{deMoura2012Z3open}.
@@ -191,7 +191,7 @@ programming language so easily. In a way, it says how much a
 new programming language or frameowrk or compiler. This has
 advantages, and dis-advantages.
 
-What's clear is that the use of a principled, high-level programming
+What is clear is that the use of a principled, high-level programming
 language to write your software in, helps hugely with the
 maintainability and robustness of the software. Such programming
 languages impose constraints like types: you can never add a number
@@ -299,18 +299,25 @@ make it easier; see Section~\ref{sec:Conclusion} at the end for more
 on this.
 
 
-\section{Form over function}
+\section{Forms of representation}
 
-ToDO 
 
-develop standard file formats which appropriately constrain the
-models. Example: qualitative networks and Boolean networks are
-standard types of biological formal
-model~\cite{Kauffman1969,Schaub2007}. They can be expressed in SMV,
-but this means that standard behaviours have to be hard coded for each
-variable, introducing the possibility for errors. In the
-BioModelAnalyzer~\cite{Benque2012}, the XML contains \emph{only} the
-modifiable parameters limiting the possibility for error.
+We often don't, and shouldn't care, how things are stored on disk,
+what their representations are. But a common, constrained, standard
+representation is good for passing tests or models around between
+different tools. A properly described representation, like the SMT-LIB
+format for SAT Modulo Theory solvers~\cite{smtlib}, where both the
+syntax and semantics are well understood, aids hugely in developing
+tools, techniques, benchmarks.
+
+Another example, from biology, is that of the standard representation
+of qualitative networks and Boolean
+networks~\cite{Kauffman1969,Schaub2007}.  These networks can be
+expressed in SMV format, but this would mean that standard QN and BN
+behaviours have to be hard coded for each variable, introducing the
+possibility for errors. In the BioModelAnalyzer
+tool~\cite{Benque2012}, the XML contains \emph{only} the modifiable
+parameters limiting the possibility for error.
 
 
 \section{9.63s} 
