@@ -66,7 +66,7 @@ code is often seen to give your competitors an advantage.
 % would show it's easy just to publish a paper and forget about the
 % code/benchmarking...
 Certainly, we ourselves have succumbed to them
-ourselves~\cite{crick-et-al:2009, SLAyer2011}.
+ourselves~\cite{crick-et-al:2009, Berdine2011SLAyer}.
 
 
 Things can be much better. And we have seen the rise of initiatives,
@@ -140,19 +140,50 @@ scientists.
 
 \section{Latin mass is better}
 
-use of high level language, with type checking (preferably units of
-measure). Agressive type checking avoids a subset of bugs which can
-arise due to incorrectly written functions e.g. well publicised NASA
-problems with a Mars orbiter
-(http://www.cnn.com/TECH/space/9909/30/mars.metric.02/). Problems
-found using in house software for crystallography lead to 5
-retractions \cite{Miller2006}, that arose due to a bug which inverted
-the phases. A pressure coupling bug in GROMACS~\cite{Hess2008},
-\url{http://redmine.gromacs.org/issues/14}, arose due to the
-inappropriate swapping of a pressure term with a stress tensor.
+There really is no other scientific or technical field where it's
+participants can just make up a non-principled artifact like a
+programming language so easily. In a way, it says how much a
+``commons'' computer science is, that anyone and his dog can create a
+new programming language or frameowrk or compiler. This has
+advantages, and dis-advantages.
 
-Readability of SSReflect vs standard Coq. Indents, vernacular, repeatabilty of proof checking because parameters are named rather than un-named. 
-cite Gonthier's Ad-hoc Proof Automation paper. 
+What's clear is that the use of a principled, high-level programming
+language to write your software in, helps hugely with the
+maintainability and robustness of the software. Such programming
+languages impose constraints like types: you can never add a number
+and a string is most basic example, but ML's functors provide
+princpled ways of plugging in components with their implementations
+completely hidden. Agressive type checking avoids a subset of bugs
+which can arise due to incorrectly written functions e.g. well
+publicised NASA problems with a Mars orbiter
+(http://www.cnn.com/TECH/space/9909/30/mars.metric.02/).
+
+A pressure coupling bug in GROMACS~\cite{Hess2008},
+\url{http://redmine.gromacs.org/issues/14}, arose due to the
+inappropriate swapping of a pressure term with a stress tensor.  A
+further extension of types, a concept called units of measure that is
+implemented in languages such as F\#, can deal with these kinds of
+bugs at compile time.
+
+[SI: Ben, can this be folded into the narrative above? Or does it need a separate para?]
+Problems found using in house software for crystallography lead to 5
+retractions \cite{Miller2006}, that arose due to a bug which inverted
+the phases.
+
+High level languages are often more readable than their
+competitors. The ``density'' of a program is often seen to be a good
+thing, but it's not always the case that a shorter Haskell program is
+better to maintain than longer python/C++ one. Nevertheless, what is
+important is the readability of the code itself. A good example here
+is from the world of automatic theorem proving: the SSReflect language
+is much more readable than the original, standard Coq
+language~\cite{GonthierZND13}. SSReflect uses mathematicians'
+vernacular for script commands, allows reproducibility of automatic
+proof checking because parameters are named rather than numbered,
+etc. Even though these proof scripts are really only ever going to be
+run by a machine, they seek to maintain the basic mathematical idea
+that a proof should be readable by another mathematician.
+
 
 \section{Set the code free} 
 
