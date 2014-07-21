@@ -269,30 +269,27 @@ current project are properly credited, encouraging future sharing
 \label{fig:overlyhonestmethod} 
 \end{figure}
 
-% \begin{quote}
-% You can download our code from the URL supplied. Good luck downloading the only postdoc who can get it to run, though \# overlyhonestmethods
+Ian Holmes's tweet is funny because it is so true. Often, the tool
+that the paper describes doesn't exist for download. Or runs only on
+one particular platform. Or might run for the author, for a while, but
+will bot-rot so soon that even the author cannot compile it in two
+months time.
 
-% \url{https://twitter.com/ianholmes/status/288689712636493824} 
-% \end{quote}
-
-probably murdered before-hand. 
-
-The tool that the paper describes either doesn't exist for
-download. Or runs only one one particular platform. Or might run for
-the author, for a while, but will bot-rot so soon that even the author
-cannot compile it in two months time.
-
-
-
-you should provide details of \emph{how} you built and wrote the software. All the below features can influence the behaviour of your software
-
-you should provide the compiler and build toolchain
-
-you should provide builds tools/makefiles/ant/etc and build instructions
-
-you should list/link to all non-standard packages/libraries/APIs
-
-you should note the hardware and OS used
+Providing the source code of the tool helps with this, of course. But
+you must also provide details of \emph{how} you built and wrote the
+software:
+%
+you should provide the compiler and build toolchain; 
+%
+you should provide builds tools/makefiles/ant/etc and build instructions; 
+%
+you should list or link to all non-standard packages and libraries that you use; 
+%
+you should note the hardware and OS used. 
+%
+This sounds like a lot of work, but github APIs, CI, VMs and cloud can
+make it easier; see Section~\ref{sec:Conclusion} at the end for more
+on this.
 
 
 \section{Form over function}
@@ -355,6 +352,7 @@ compute engines.
 
 
 \section{Conclusion}
+\label{sec:Conclusion} 
 
 Bringn all of the above together into an open, always-active (so always working) CI
 system for tools. 
