@@ -1,4 +1,5 @@
 \documentclass[conference]{IEEEtran}
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
 
 \usepackage[british]{babel}
 \usepackage[hyphens]{url}
@@ -10,7 +11,7 @@
 \bstctlcite{IEEEexample:BSTcontrol}
 
 % still not happy with the title...
-\title{``Can I Implement Your Algorithm?'':\\ A Model for Benchmarking Research Software}
+\title{``Can I Implement Your Algorithm?'':\\ A Model for Reproducible Research Software}
 
 % author names and affiliations
 % use a multiple column layout for up to three different
@@ -106,10 +107,10 @@ this area~\cite{sim-et-al:2003,chirigati-et-al:2013}, as well as a
 range of manifestos for reproducible research and community
 initiatives, such as cTuning~\footnote{\url{http://ctuning.org/}} and
 the Recomputation
-Manifesto~\cite{gent:2013}~\footnote{\url{http://www.recomputation.org/}},
+Manifesto~\footnote{\url{http://www.recomputation.org/}},
 along with curated recommendations on where to publish research
 software~\footnote{\url{http://www.software.ac.uk/resources/guides/which-journals-should-i-publish-my-software}}.
-
+% ~\cite{gent:2013}
 
 \section{Can I implement your algorithm?}
 
@@ -224,13 +225,13 @@ subset of bugs which can arise due to incorrectly written functions
 e.g. well publicised NASA problems with a Mars orbiter~\footnote{See:
 \url{http://www.cnn.com/TECH/space/9909/30/mars.metric.02/}}.  A
 further example is a pressure coupling bug in GROMACS~\cite{Hess2008},
-\url{http://redmine.gromacs.org/issues/14}, which arose due to the
-inappropriate swapping of a pressure term with a stress tensor.  A
-further extension of types, a concept called units of measure that is
-implemented in languages such as F\#, can deal with these kinds of
-bugs at compile time. Similarly, problems found using in-house
-software for crystallography led to five papers
+which arose due to the inappropriate swapping of a pressure term with
+a stress tensor.  A further extension of types, a concept called units
+of measure that is implemented in languages such as F\#, can deal with
+these kinds of bugs at compile time. Similarly, problems found using
+in-house software for crystallography led to five papers
 retractions~\cite{Miller2006}, due to a bug which inverted the phases.
+% \url{http://redmine.gromacs.org/issues/14}
 
 High level languages are often more readable than their
 competitors. The ``density'' of a program is often seen to be a good
@@ -289,7 +290,7 @@ files~\footnote{\url{http://blog.rtwilson.com/encouraging-citation-of-software-i
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.9\columnwidth]{overlyhonesttweet.png}
+\includegraphics[width=\columnwidth]{overlyhonesttweet.png}
 \caption{An \#overlyhonestmethod\newline [source: \url{https://twitter.com/ianholmes/status/288689712636493824}]}
 \label{fig:overlyhonestmethod} 
 \end{figure}
@@ -348,13 +349,11 @@ the author vs. the referee. It is worse than that really: enough
 benchmarks are included to beat other tools. The comparisons are never
 fair (neither are other peoples' comparisons against your tool). If
 every paper has to be novel, then every benchmark, too, will be novel;
-there is no monotonic, historical truth in new, syntheticly-crafted
-benchmarks.
-
-It is as if, in order to beat Usain Bolt's world record time, you put
-him in a muddy icy track, and weighed him down with 50kg of excess
-weight. Given this set up, you could hope to beat his 9.63s on a
-shorter length track.
+there is no monotonic, historical truth in new, synthetically-crafted
+benchmarks. It is as if, in order to beat Usain Bolt's world record
+time, you put him in a muddy icy track, and weighed him down with 50kg
+of excess weight. Given this set up, you could hope to beat his 9.63s
+on a shorter length track.
 
 Benchmarks should be public. They should allow anyone to contribute,
 implying that the tests are in a standard format. Further, these
@@ -374,12 +373,14 @@ tool.
 
 The web and the cloud really do open up a whole new way of
 working. Even small, seemingly trivial features like putting up a web
-interface to your tool and its tests will allow users who are not
-able to install necessary dependencies to explore the running of the
-tool \cite{Hall2014}. Ultimately, this can lead to making an
-``executable paper'' appear on the internet. The interactive {\em Try
-  F\#}~\cite{tryFsharp} and Z3 tutorials~\cite{Z3tutorial} are a great
-start that begin to expose what can be done in this area.
+interface to your tool and its tests will allow users who are not able
+to install necessary dependencies to explore the running of the tool
+\cite{Hall2014}. Ultimately, this can lead to making an ``executable
+paper'' appear on the internet. The interactive {\em Try
+F\#}~\footnote{\url{http://www.tryfsharp.org/Learn}} and Z3
+tutorials~\footnote{\url{http://rise4fun.com/Z3/tutorial/guide}} are a
+great start that begin to expose what can be done in this area.
+% removed: ~\cite{tryFsharp} ~\cite{Z3tutorial}
 
 Virtual machines on the cloud also make the testing of scaling
 properties more simple.  If you have a tool that you claim is more
@@ -425,13 +426,13 @@ the implementation of your published algorithm.
 % number - used to balance the columns on the last page
 % adjust value as needed - may need to be readjusted if
 % the document is modified later
-%\IEEEtriggeratref{37}
+% \IEEEtriggeratref{37}
 % The "triggered" command can be changed if desired:
 %\IEEEtriggercmd{\enlargethispage{-5in}}
 
 
 % BibTeX users
-\bibliographystyle{IEEEtran}      % basic style, author-year citations
-\bibliography{wssspe2}   % name your BibTeX data base
+\bibliographystyle{IEEEtran}
+\bibliography{wssspe2}
 
 \end{document}
