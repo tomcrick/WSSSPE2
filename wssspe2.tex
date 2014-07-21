@@ -82,7 +82,7 @@ code prematurely is often seen to give your competitors an
 advantage. But we should be shining light into ``black
 boxes''~\cite{morin-et-al:2012}.
 
-But things can and should be much better. In this short paper, we
+Things can and should be much better. In this short paper, we
 present a call to action with a small set of recommendations which we
 hope will lead to better, more sustainable, more re-useable software,
 to move towards an imagined future practice of software development
@@ -207,16 +207,14 @@ completely hidden. Aggressive type checking avoids a subset of bugs
 which can arise due to incorrectly written functions e.g. well
 publicised NASA problems with a Mars orbiter
 (http://www.cnn.com/TECH/space/9909/30/mars.metric.02/).
-
-A pressure coupling bug in GROMACS~\cite{Hess2008},
-\url{http://redmine.gromacs.org/issues/14}, arose due to the
+One example is a pressure coupling bug in GROMACS~\cite{Hess2008},
+\url{http://redmine.gromacs.org/issues/14}, which arose due to the
 inappropriate swapping of a pressure term with a stress tensor.  A
 further extension of types, a concept called units of measure that is
 implemented in languages such as F\#, can deal with these kinds of
 bugs at compile time.
-
-[SI: Ben, can this be folded into the narrative above? Or does it need a separate para?]
-Problems found using in house software for crystallography lead to 5
+%[SI: Ben, can this be folded into the narrative above? Or does it need a separate para?]
+Similarly, problems found using in house software for crystallography lead to 5
 retractions \cite{Miller2006}, that arose due to a bug which inverted
 the phases.
 
@@ -250,7 +248,8 @@ architectures would diverge. Similarly, in a different simulation
 engine, different neighbour searching strategies gave divergent
 simulations due to the differing order in which forces were summed.
 
-Unshared code is untestable. Testing new complex scientific software is
+Despite these challenges to testing, unshared code is untestable.
+Testing new complex scientific software is
 difficult, as until the software is complete unit tests may not be
 available. You should thus link from shared code -- shared code is
 more test-able.
@@ -308,7 +307,7 @@ on this.
 \section{Forms of representation}
 
 
-We often don't, and shouldn't care, how things are stored on disk,
+We often do not, and should not care, how things are stored on disk,
 what their representations are. But a common, constrained, standard
 representation is good for passing tests or models around between
 different tools. A properly described representation, like the SMT-LIB
@@ -362,7 +361,7 @@ tool.
 The web and the cloud really do open up a whole new way of
 working. Even small, seemingly trivial features like putting up a web
 interface to your tool and it's tests will allow users who are not
-able to install necessary dependecies to explore the running of the
+able to install necessary dependencies to explore the running of the
 tool \cite{Hall2014}. Ultimately, this can lead to making an
 ``executable paper'' appear on the internet. The interactive {\em Try
   F\#}~\cite{tryFsharp} and Z3 tutorials~\cite{Z3tutorial} are a great
