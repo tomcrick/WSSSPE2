@@ -56,8 +56,8 @@ powerful sharing of the results of scientific software engineering.
 
 \section{Introduction}
 
-Marc Andreessen famously said in 2011 that ``software is eating the
-world''~\cite{andreessen:2011}. It is true: we clearly live in a
+Marc Andreessen famously said in 2011 that ``{\emph{software is eating the
+world}}''~\cite{andreessen:2011}. It is true: we clearly live in a
 computational world, with our everyday communications, entertainment,
 shopping, security, transportation, \dots\ all heavily dependent on
 (or replaced by) software.
@@ -107,10 +107,9 @@ this area~\cite{sim-et-al:2003,chirigati-et-al:2013}, as well as a
 range of manifestos for reproducible research and community
 initiatives, such as cTuning~\footnote{\url{http://ctuning.org/}} and
 the Recomputation
-Manifesto~\footnote{\url{http://www.recomputation.org/}},
+Manifesto~\cite{gent:2013}~\footnote{\url{http://www.recomputation.org/}},
 along with curated recommendations on where to publish research
 software~\footnote{\url{http://www.software.ac.uk/resources/guides/which-journals-should-i-publish-my-software}}.
-% ~\cite{gent:2013}
 
 \section{Can I implement your algorithm?}
 
@@ -158,13 +157,13 @@ the code that underlies it too needs to be open and free. Code that is
 available for browsing, modifying, and forking facilitates testing and
 comparison, and promotes competition. We recommend that code be
 published under an appropriate open source license~\cite{osl}; while
-we defer legal discussiosn of any particular licences, BSD and Apache
+we defer legal discussion of any particular licences, BSD and Apache
 are good, flexible ones.
-%, though IANAL. 
+% IANAL...
 
 A wide variety of licenses exist for molecular dynamics software, with
 different degrees of openness (GROMACS is LGPL~\cite{Hess2008},
-CHARMM/CHARMm and Desmond are Academic/Commercial software
+CHARMM and Desmond are Academic/Commercial software
 licences~\cite{Brooks2009,Bowers2006}, Amber and NAMD are custom
 open-like licences). Z3 is an example from the verification area: the
 code itself is not open source, but the MSR-LA that allows the source
@@ -191,7 +190,7 @@ raise the profile of research software engineers.
 
 Some scientists may not have had any formal, or even informal,
 training in programming. Even basic training in software engineering
-concepts like revision control, unit tests, etc can help improve the
+concepts like version control, unit testing, etc, can help improve the
 quality of the software written
 enormously~\cite{Wilson2014}~\footnote{Also see:
 \url{http://philipwfowler.wordpress.com/2013/12/19/the-oxford-software-carpentry-boot-camp-one-year-on/}}.
@@ -224,14 +223,15 @@ implementations completely hidden. Aggressive type checking avoids a
 subset of bugs which can arise due to incorrectly written functions
 e.g. well publicised NASA problems with a Mars orbiter~\footnote{See:
 \url{http://www.cnn.com/TECH/space/9909/30/mars.metric.02/}}.  A
-further example is a pressure coupling bug in GROMACS~\cite{Hess2008},
-which arose due to the inappropriate swapping of a pressure term with
-a stress tensor.  A further extension of types, a concept called units
-of measure that is implemented in languages such as F\#, can deal with
-these kinds of bugs at compile time. Similarly, problems found using
-in-house software for crystallography led to five papers
-retractions~\cite{Miller2006}, due to a bug which inverted the phases.
-% \url{http://redmine.gromacs.org/issues/14}
+further example is a pressure coupling
+bug~\footnote{\url{http://redmine.gromacs.org/issues/14}} in
+GROMACS~\cite{Hess2008}, which arose due to the inappropriate swapping
+of a pressure term with a stress tensor.  A further extension of
+types, a concept called units of measure that is implemented in
+languages such as F\#, can deal with these kinds of bugs at compile
+time. Similarly, problems found using in-house software for
+crystallography led to the retraction of five papers~\cite{Miller2006}, due
+to a bug which inverted the phases.
 
 High level languages are often more readable than their
 competitors. The ``density'' of a program is often seen to be a good
@@ -308,11 +308,11 @@ wrote the software:
 %
 you should provide the compiler and build toolchain; 
 %
-you should provide builds tools/makefiles/ant/etc and build instructions; 
+you should provide builds tools/Makefiles/Ant/etc and build instructions; 
 %
 you should list or link to all non-standard packages and libraries that you use; 
 %
-you should note the hardware and OS used. 
+you should note the specifics of the hardware and OS used. 
 %
 This sounds like a lot of work, but GitHub APIs, Continuous
 Integration servers, VMs and cloud environments can make it easier; see
@@ -330,8 +330,8 @@ solvers, where both the syntax and semantics are well understood, aids
 hugely in developing tools, techniques, benchmarks.
 
 Another example, from biology, is that of the standard representation
-of qualitative networks and Boolean
-networks~\cite{Kauffman1969,Schaub2007}.  These networks can be
+of qualitative networks (QN) and Boolean
+networks (BN)~\cite{Kauffman1969,Schaub2007}.  These networks can be
 expressed in SMV format, but this would mean that standard QN and BN
 behaviours have to be hard-coded for each variable, introducing the
 possibility for errors. In the BioModelAnalyzer
@@ -361,13 +361,12 @@ benchmarks must be heavily curated. Every test/assertion should be
 justified. Papers should be penalised if they do not use these public
 benchmarks.
 
-A good example of some of these points is the protein data bank
-(\url{http://www.pdb.org}) and Systems Biology Markup
+A good example of some of these points is the RCSB Protein Data
+Bank~\footnote{\url{http://www.pdb.org}} and Systems Biology Markup
 Language~\cite{Hucka2003,Chaouiya2013}. The software ones we know of,
 the SMT Competition and the SV-COMP ones~\cite{SMTComp2014,
-  SVCOMP2015}, are on that journey. Such repositories would
-allow the tests to be taken and easily analysed by any competitor
-tool.
+SVCOMP2015}, are on that journey. Such repositories would allow the
+tests to be taken and easily analysed by any competitor tool.
 
 \section{Welcome to Web 2.0} 
 
