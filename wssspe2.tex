@@ -40,65 +40,70 @@ Abstract here...
 
 \section{Introduction}
 
-Marc Andreessen famously said in 2011 that ``software is eating
-the world''~\cite{andreessen:2011}. It's true: we clearly live in a
-computational world, with our everyday interactions, entertainment, books, 
-shopping, keys, transportation, \dots\ heavily dependent on (or replaced by)
-software.
+Marc Andreessen famously said in 2011 that ``software is eating the
+world''~\cite{andreessen:2011}. It's true: we clearly live in a
+computational world, with our everyday interactions, entertainment,
+books, shopping, keys, transportation, \dots\ heavily dependent on (or
+replaced by) software.
 
-This is also true in science and engineering. New results, benchmarks, even proofs
-cannot be done without software. And this software is not throw-away
-scripts; it needs to be maintained and it needs to be re-useable. This
-is particularly true in science, where reproducibility is one of the
-bases of the methodology.
+This is also true in science and engineering. A 2012 report by the
+Royal Society stated that computational techniques have ``{\emph{moved
+on from assisting scientists in doing science, to transforming both
+how science is done and what science is
+done}}''~\cite{rssaaoe:2012}. New experiments, simulations, models,
+benchmarks, even proofs cannot be done without software. And this
+software does not consist of simple use-once, throw-away scripts;
+scientific software repositories contain thousands, perhaps millions,
+of lines of code and they need to be actively maintained. More importantly,
+they need to be re-useable -- reproducibility is a fundamental tenet of
+science.
 
 However, if we want to be truthful about this, then the scientific
-literature related to software tools (CAV Tool papers, or Nature Tools
-and Method(?)  papers, say) often don't appear to be doing science
-themselves. How many of them are reproducible? How many explain their
-experimental methodologies, in particular the basis for their
-benchmarking?
-
-There are reasons why the state is like this. These include many
-non-technical impediments to making software maintainable and
-re-useable, too. The pressure to ``make the discovery'' and publish
-quickly dis-incentivizes careful software development. And releasing
-code is often seen to give your competitors an advantage. 
+literature related to software tools (***ref here? CAV Tool papers, or
+Nature Tools and Method(?)  papers, say) often don't appear to be
+doing science themselves. How many of them are reproducible? How many
+explain their experimental methodologies, in particular the basis for
+their benchmarking? We, the authors, are as guilty as anyone in the
+past, where we have succumbed to publishing
+papers~\cite{crick-et-al:2009, Berdine2011SLAyer} with benchmarks and
+promises of code to be released in the near future.
 % let's all give an example of where we haven't done this ourselves?
 % would show it's easy just to publish a paper and forget about the
 % code/benchmarking...
-Certainly, we ourselves have succumbed to them
-ourselves~\cite{crick-et-al:2009, Berdine2011SLAyer}.
 
+There are many reasons why the wider scientific community is in this
+state. We are experiencing significant changes in academic
+dissemination and publication, especially the open access movement,
+with new models being
+proposed~\cite{stodden-et-al:2013,fursin+dubach:2014}.  There are
+numerous non-technical impediments to making software maintainable and
+re-useable, too. The pressure to ``make the discovery'' and publish
+quickly disincentivises careful software development. And releasing
+code prematurely is often seen to give your competitors an advantage.
 
-Things can be much better. And we have seen the rise of initiatives,
-such as the Software
+But things can and should be much better. And we have seen the rise of
+initiatives, such as the Software
 Carpentry~\footnote{\url{http://software-carpentry.org/}}, Software
 Sustainability Institute~\footnote{\url{http://www.software.ac.uk/}}
 and the UK Community of Research Software
 Engineers~\footnote{\url{http://www.rse.ac.uk}} to cultivate
-world-class research through software, as well as develop software
-skills and raise the profile of research software engineers.
-
-
-
-Big focus on changing publishing and academic dissemination
-e.g. \cite{stodden-et-al:2013,fursin+dubach:2014}.
-
-Recommendations on where to publish software:
-http://www.software.ac.uk/resources/guides/which-journals-should-i-publish-my-software
-
+world-class research through software,develop software
+skills and raise the profile of research software engineers, as well
+as recommendations on where to publish
+software~\footnote{\url{http://www.software.ac.uk/resources/guides/which-journals-should-i-publish-my-software}}.
 
 In this short paper, we present a small set of recommendations which
 we hope will lead to better, more sustainable, more re-useable
-software. The basis for many of these recommendations is the basic
-scientific tenet of open-ness.
+software, to move towards an imagined future practice of software
+development and usage in science and engineering.  The basis for many
+of these recommendations is the basic scientific tenet of openness.
+There has been previous work in this
+area~\cite{sim-et-al:2003,chirigati-et-al:2013}, as well as a range of
+manifestos for reproducible research and community initiatives, such
+as cTuning~\footnote{\url{http://ctuning.org/}} and the Recomputation
+Manifesto~\footnote{\url{http://www.recomputation.org/}}.
 
-This is not a new problem; there has been previous work in this
-area...~\cite{sim-et-al:2003,chirigati-et-al:2013}, as well as
-http://ctuning.org/and http://www.recomputation.org/.
-
-Cite~\cite{collberg-et-al:2014}
+Where to cite reproducibility in computer science~\cite{collberg-et-al:2014}??
 
 
 \section{Can I implement your algorithm?}
@@ -376,7 +381,6 @@ more main proposal: a lineage of the software (history/branches) and a
 
 
 
-
 % trigger a \newpage just before the given reference
 % number - used to balance the columns on the last page
 % adjust value as needed - may need to be readjusted if
@@ -384,6 +388,8 @@ more main proposal: a lineage of the software (history/branches) and a
 %\IEEEtriggeratref{37}
 % The "triggered" command can be changed if desired:
 %\IEEEtriggercmd{\enlargethispage{-5in}}
+
+%%% TOM TO FIX REFERENCES
 
 % BibTeX users
 \bibliographystyle{IEEEtran}      % basic style, author-year citations
