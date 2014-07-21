@@ -120,6 +120,46 @@ conferences have a special track for papers that only re-implement
 past papers' algorithms, techniques, or tools.
 
 
+\section{Set the code free} 
+
+There can be no better proof that your algorithm works, then if you
+provide the source code of an implementation. Software development is
+hard, but sharing and using others code is relatively easy.
+
+A long time ago, Richard Stallman imagined that all code would be free
+and we'd make our money by consulting on the code.
+Surprisingly/amusingly, this is the case for a significant part of the
+computing industry now. But, of course, there are hard commercial
+pressures for keeping code closed-source. Even in the scientific
+domain, scientists and their collaborators may wish to hold onto their
+code as a competitive advantage, especially if there exist larger
+competitors who could use the available code to ``reverse scoop'' the
+inventors, and so to charge into a promising new area opened by the
+inventors.
+
+Closed source is one thing. Licenses that deny the user from viewing,
+modifying, or sharing the source are one thing. But there are even
+licences on widely adopted tools like GAUSSIAN~\cite{Giles2004} that
+prohibit even analyzing software performance and behaviour.
+ 
+But there is little doubt that, if science wants to be open and free,
+then the code that underlies it too wants to be open and free. Code
+that is available for browsing, modifying, and forking facilitates
+testing and comparison, and promotes competition.
+
+We recommend that code be published under an appropriate open source
+license; BSD and Apache are good, flexible ones, though IANAL.  A wide
+variety of licenses exist for molecular dynamics software, with
+different degrees of openness (GROMACS=LGPL~\cite{Hess2008}
+,CHARMM/CHARMm and Desmond=Academic/Commercial software
+licences~\cite{Brooks2009,Bowers2006}, Amber and NAMD=custom open-like
+licence). Z3 is an example from the verification area: the code itself
+is not open source, but the MSR-LA that allows the source code to be
+read, copied, forked for academic use, provides scholars in the field
+much more than before~\cite{deMoura2012Z3open}.
+
+Set the code free. Put it on a place like github, where it's easy to fork. 
+
 
 \section{Be a better person}
 
@@ -187,32 +227,6 @@ run by a machine, they seek to maintain the basic mathematical idea
 that a proof should be readable by another mathematician.
 
 
-\section{Set the code free} 
-
-software development is hard, but sharing and using others code is
-relatively easy. Code developing groups may wish to hold onto their
-code as a competitive advantage, especially if there exist larger
-competitors who could use the available code to ``reverse scoop'' and
-lead into a promising new area opened by someone else.
-
-the code should have an appropriate open source license
-(recommendations?). A wide variety of licenses exist for molecular
-dynamics software, with different degrees of openness (GROMACS=LGPL~\cite{Hess2008}
-,CHARMM/CHARMm and Desmond=Academic/Commercial software licences~\cite{Brooks2009,Bowers2006}, Amber
-and NAMD=custom open-like licence).
-
-Whilst the lack of an open licence is not necessarily a barrier to
-widespread adoption (e.g. GAUSSIAN), it facilitates testing and
-comparison, and promotes competition.
-
-Z3 is another good example. The code is not open source, but providing
-the code under an academic license is much better than not providing
-the code at all.
-
-licences may prohibit viewing the source, modifying, sharing, or even
-analysing software performance and behaviour e.g. GAUSSIAN~\cite{Giles2004}
-
-the code should be available on github or similar source control/repo?
 
 \section{Test it to see}
 link from shared code... shared code is more test-able. 
