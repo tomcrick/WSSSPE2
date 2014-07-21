@@ -246,23 +246,29 @@ The benchmarks the tool describes are fashioned only for this instance
 of this time. They might claim to be from the Windows device driver
 set, but the reality is that they are are stripped down versions of
 the originals. Stripped down so much as to be useless to anyone but
-the author vs the referee. It's worst than that really: enough
+the author vs. the referee. It's worst than that really: enough
 benchmarks are included to beat other tools. The comparisons are never
 fair. (Neither are other peoples' comparisons against your tool.) If
 every paper has to be novel, then every benchmark, too, will be novel;
-there is no historical truth in new, crafted benchmarks.
+there is no monotonic, historical truth in new, syntheticly-crafted
+benchmarks.
 
+It's as if, in order to beat Usain Bolt's time, you put him in a muddy
+icy track, and weighed him down with 50k of excess weight. Given this
+set up, you could hope to beat his 9.63s on a shorter length track.
 
-Benchmarks should be public, they should be heavily curated (every
-test/assertion should be justified). Papers should be penalized if
-they don't use these public benchmarks.
+Benchmarks should be public. They should allow anyone to contribute,
+implying that the tests are in a standard format. Further, these
+benchmarks must be heavily curated. Every test/assertion should be
+justified. Papers should be penalized if they don't use these public
+benchmarks.
 
-you should include the models used for testing/benchmarking, or
-(better) deposit the models in a standard format, in a standard
-repository e.g. the protein data bank (\url{http://www.pdb.org}) and
-Systems Biology Markup Language~\cite{Hucka2003,Chaouiya2013}. This
-would allow the models to be taken and easily analysed in alternative
-programs where available.
+A good example of some of these points is the protein data bank
+(\url{http://www.pdb.org}) and Systems Biology Markup
+Language~\cite{Hucka2003,Chaouiya2013}. The software ones we know of,
+the SMT Competition and the SV-COMP ones~\cite{SMTComp, SVCOMP}, are
+starting on that journey. Such repositories would allow the tests to
+be taken and easily analysed by any competitor tool. 
 
 \section{Welcome to the Web 2.0, guys; you're 10 years late} 
 
