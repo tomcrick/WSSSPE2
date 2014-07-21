@@ -54,9 +54,9 @@ done}}''~\cite{rssaaoe:2012}. New experiments, simulations, models,
 benchmarks, even proofs cannot be done without software. And this
 software does not consist of simple use-once, throw-away scripts;
 scientific software repositories contain thousands, perhaps millions,
-of lines of code and they need to be actively maintained. More importantly,
-they need to be re-useable -- reproducibility is a fundamental tenet of
-science.
+of lines of code and they need to be actively maintained. More
+importantly, with reproducibility being a fundamental tenet of
+science, they need to be re-useable.
 
 However, if we want to be truthful about this, then the scientific
 literature related to software tools (***ref here? CAV Tool papers, or
@@ -81,27 +81,19 @@ re-useable, too. The pressure to ``make the discovery'' and publish
 quickly disincentivises careful software development. Releasing
 code prematurely is often seen to give your competitors an advantage.
 
-Things can and should be much better. We have seen the rise of
-initiatives, such as the Software
-Carpentry~\footnote{\url{http://software-carpentry.org/}}, Software
-Sustainability Institute~\footnote{\url{http://www.software.ac.uk/}}
-and the UK Community of Research Software
-Engineers~\footnote{\url{http://www.rse.ac.uk}} to cultivate
-world-class research through software,develop software
-skills and raise the profile of research software engineers, as well
-as recommendations on where to publish
+But things can and should be much better. In this short paper, we
+present a small set of recommendations which we hope will lead to
+better, more sustainable, more re-useable software, to move towards an
+imagined future practice of software development and usage in science
+and engineering.  The basis for many of these recommendations is the
+basic scientific tenet of openness. There has been previous work in
+this area~\cite{sim-et-al:2003,chirigati-et-al:2013}, as well as a
+range of manifestos for reproducible research and community
+initiatives, such as cTuning~\footnote{\url{http://ctuning.org/}} and
+the Recomputation
+Manifesto~\footnote{\url{http://www.recomputation.org/}}, as well as
+recommendations on where to publish
 software~\footnote{\url{http://www.software.ac.uk/resources/guides/which-journals-should-i-publish-my-software}}.
-
-In this short paper, we present a small set of recommendations which
-we hope will lead to better, more sustainable, more re-useable
-software, to move towards an imagined future practice of software
-development and usage in science and engineering.  The basis for many
-of these recommendations is the basic scientific tenet of openness.
-There has been previous work in this
-area~\cite{sim-et-al:2003,chirigati-et-al:2013}, as well as a range of
-manifestos for reproducible research and community initiatives, such
-as cTuning~\footnote{\url{http://ctuning.org/}} and the Recomputation
-Manifesto~\footnote{\url{http://www.recomputation.org/}}.
 
 Where to cite reproducibility in computer science~\cite{collberg-et-al:2014}??
 
@@ -163,32 +155,40 @@ is not open source, but the MSR-LA that allows the source code to be
 read, copied, forked for academic use, provides scholars in the field
 much more than before~\cite{deMoura2012Z3open}.
 
-Set the code free. Put it on a place like github, where it's easy to fork. 
+Ultimately: set the code free. Put it on a place like GitHub, where it
+is easy to fork and share.
 
 
 \section{Be a better person}
 
-If you have the skills and the experience, you can create better software. 
+If you have the skills and the experience, you can create better
+software. We have seen the rise of initiatives, such as the Software
+Carpentry~\footnote{\url{http://software-carpentry.org/}}, Software
+Sustainability Institute~\footnote{\url{http://www.software.ac.uk/}}
+and the UK Community of Research Software
+Engineers~\footnote{\url{http://www.rse.ac.uk}} to cultivate
+world-class research through software, develop software skills and
+raise the profile of research software engineers.
 
 Some scientists may not have had any formal, or even informal,
 training in programming. Even basic training in software engineering
 concepts like revision control, unit tests, etc can help improve the
 quality of the software written enormously
 http://philipwfowler.wordpress.com/2013/12/19/the-oxford-software-carpentry-boot-camp-one-year-on/
-~\cite{Wilson2014}.  
-Interestingly, many of these concepts are taught
+~\cite{Wilson2014}.  Interestingly, many of these concepts are taught
 to computing undergraduates, but it could be argued that they are
 taught at the wrong time of the engineers' careers, where the
 importance of complex, long-running projects is not yet appreciated.
 
-We recommend that basic programming and computing skills are taught to
-scientists.
+These are fundamental literacies for scientists and engineers: we
+recommend that basic programming and computational skills are taught
+as a core at undergraduate and postgraduate levels.
 
 
 \section{Latin mass is better}
 
-There really is no other scientific or technical field where it's
-participants can just make up a non-principled artifact like a
+There really is no other scientific or technical field where its
+participants can just make up a non-principled artefact like a
 programming language so easily. In a way, it says how much a
 ``commons'' computer science is, that anyone and his dog can create a
 new programming language or frameowrk or compiler. This has
@@ -246,7 +246,7 @@ available
 some models may be chaotic and influenced by floating point errors
 (e.g. molecular dynamics), further frustrating testing. Example:
 Sidekick is an automated tool for building molecular models and
-performing simualations~\cite{Hall2014Sidekick}. Each system is
+performing simulations~\cite{Hall2014Sidekick}. Each system is
 simulated from an different initial random seed, and under most
 circumstances this is the only difference expected between
 replicas. However, on a mixed cluster with AMD and intel nodes, the
@@ -279,11 +279,11 @@ current project are properly credited, encouraging future sharing
 \label{fig:overlyhonestmethod} 
 \end{figure}
 
-Ian Holmes's tweet is funny because it is so true. Often, the tool
-that the paper describes doesn't exist for download. Or runs only on
-one particular platform. Or might run for the author, for a while, but
-will bot-rot so soon that even the author cannot compile it in two
-months time.
+The tweet is Figure~\ref{fig:overlyhonestmethod} is funny because it
+is so true. Often, the tool that the paper describes doesn't exist for
+download. Or runs only on one particular platform. Or might run for
+the author, for a while, but will bit-rot so soon that even the author
+cannot compile it in two months time.
 
 Providing the source code of the tool helps with this, of course. But
 you must also provide details of \emph{how} you built and wrote the
@@ -297,7 +297,7 @@ you should list or link to all non-standard packages and libraries that you use;
 %
 you should note the hardware and OS used. 
 %
-This sounds like a lot of work, but github APIs, CI, VMs and cloud can
+This sounds like a lot of work, but GitHub APIs, CI, VMs and cloud can
 make it easier; see Section~\ref{sec:Conclusion} at the end for more
 on this.
 
@@ -370,11 +370,11 @@ compute engines.
 
 ToDO 
 
-Bringn all of the above together into an open, always-active (so always working) CI
-system for tools. 
+Bring all of the above together into an open, always-active (so always
+working) Continuous Integration system for tools. 
 
 main proposal: automatic online dependency/build/traffic light system
-with github hooks?
+with GitHub hooks?
 
 more main proposal: a lineage of the software (history/branches) and a
 (more limited) lineage of the algorithm its built on
@@ -389,7 +389,7 @@ more main proposal: a lineage of the software (history/branches) and a
 % The "triggered" command can be changed if desired:
 %\IEEEtriggercmd{\enlargethispage{-5in}}
 
-%%% TOM TO FIX REFERENCES
+%%% TOM TO TIDY/FIX REFERENCES
 
 % BibTeX users
 \bibliographystyle{IEEEtran}      % basic style, author-year citations
