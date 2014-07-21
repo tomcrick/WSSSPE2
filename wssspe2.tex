@@ -60,16 +60,15 @@ science, they need to be re-useable.
 
 However, if we want to be truthful about this, then the scientific
 literature related to software tools (***ref here? CAV Tool papers, or
-Nature Tools and Method(?)  papers, say) often don't appear to be
-doing science themselves. How many of them are reproducible? How many
-explain their experimental methodologies, in particular the basis for
-their benchmarking? We, the authors, are as guilty as anyone in the
-past, where we have succumbed to publishing
+Nature Tools and Method(?)  papers, say) often do not appear to be
+adhering to the rules themselves. There are numerous
+examples~\cite{beck-et-al:2005,prosser:2012}; how many of them are
+reproducible? How many explain their experimental methodologies, in
+particular the basis for their benchmarking? Can we build the
+code?~\cite{collberg-et-al:2014} We, the authors, are as guilty as
+anyone in the past, where we have succumbed to publishing
 papers~\cite{crick-et-al:2009, Berdine2011SLAyer} with benchmarks and
 promises of code to be released in the near future.
-% let's all give an example of where we haven't done this ourselves?
-% would show it's easy just to publish a paper and forget about the
-% code/benchmarking...
 
 There are many reasons why the wider scientific community is in this
 state. We are experiencing significant changes in academic
@@ -82,20 +81,18 @@ quickly disincentivises careful software development. And releasing
 code prematurely is often seen to give your competitors an advantage.
 
 But things can and should be much better. In this short paper, we
-present a small set of recommendations which we hope will lead to
-better, more sustainable, more re-useable software, to move towards an
-imagined future practice of software development and usage in science
-and engineering.  The basis for many of these recommendations is the
-basic scientific tenet of openness. There has been previous work in
-this area~\cite{sim-et-al:2003,chirigati-et-al:2013}, as well as a
-range of manifestos for reproducible research and community
-initiatives, such as cTuning~\footnote{\url{http://ctuning.org/}} and
-the Recomputation
-Manifesto~\footnote{\url{http://www.recomputation.org/}}, as well as
+present a call to action with a small set of recommendations which we
+hope will lead to better, more sustainable, more re-useable software,
+to move towards an imagined future practice of software development
+and usage in science and engineering.  The basis for many of these
+recommendations is the basic scientific tenet of openness. There has
+been previous work in this
+area~\cite{sim-et-al:2003,chirigati-et-al:2013}, as well as a range of
+manifestos for reproducible research and community initiatives, such
+as cTuning~\footnote{\url{http://ctuning.org/}} and the Recomputation
+Manifesto~\cite{gent:2013}~\footnote{\url{http://www.recomputation.org/}}, as well as
 recommendations on where to publish
 software~\footnote{\url{http://www.software.ac.uk/resources/guides/which-journals-should-i-publish-my-software}}.
-
-Where to cite reproducibility in computer science~\cite{collberg-et-al:2014}??
 
 
 \section{Can I implement your algorithm?}
@@ -111,7 +108,7 @@ description in-lines many other algorithms or data structures that
 perhaps only the author is familiar with.
 
 We recommend here that a paper must describe the algorithm in such a
-way that it's implementable by any reader of that algorithm. This is
+way that it is implementable by any reader of that algorithm. This is
 subjective, of course. So, we also recommend that good scientific
 conferences have a special track for papers that only re-implement
 past papers' algorithms, techniques, or tools.
@@ -231,43 +228,43 @@ etc. Even though these proof scripts are really only ever going to be
 run by a machine, they seek to maintain the basic mathematical idea
 that a proof should be readable by another mathematician.
 
-
-
 \section{Test it to see}
 
-ToDO 
-
-link from shared code... shared code is more test-able. 
-
-unshared code is untestable.  testing new scientific software is
-difficult, as until the software is complete unit tests may not be
-available
-
-some models may be chaotic and influenced by floating point errors
-(e.g. molecular dynamics), further frustrating testing. Example:
+Some models may be chaotic and influenced by floating point errors
+(e.g. molecular dynamics), further frustrating testing. For example:
 Sidekick is an automated tool for building molecular models and
 performing simulations~\cite{Hall2014Sidekick}. Each system is
 simulated from an different initial random seed, and under most
 circumstances this is the only difference expected between
-replicas. However, on a mixed cluster with AMD and intel nodes, the
-difference in architecture was found to alter the number of water
-molecules added to each system by 1. This meant that the same
-simulation performed on different architectures would
-diverge. Similarly, in a different simulation engine, different
-neighbour searching strategies gave divergent simulations due to the
-differing order in which forces were summed.
+replicas. However, on a mixed cluster with both AMD and Intel
+microprocessors on the nodes, the difference in architecture was found
+to alter the number of water molecules added to each system by
+one. This meant that the same simulation performed on different
+architectures would diverge. Similarly, in a different simulation
+engine, different neighbour searching strategies gave divergent
+simulations due to the differing order in which forces were summed.
 
-
+Unshared code is untestable. Testing new complex scientific software is
+difficult, as until the software is complete unit tests may not be
+available. You should thus link from shared code -- shared code is
+more test-able.
 
 \section{Lineage} 
 
-ToDO 
-
-the code should include links to papers publishing individual
-algorithms and the code should include explicit relationships to other
-projects on the repo (i.e. B was branched from A). This ensure that
-the researchers and software developers working upstream of the
-current project are properly credited, encouraging future sharing
+Research software is not just software -- it is the instantiation of
+novel algorithms and data structures (or at least novel applications
+of data structures). Thus, lineage is important: the code should
+include links to papers publishing key algorithms and the
+code should include explicit relationships to other projects on the
+repository (i.e. {\emph{Project B}} was branched from {\emph{Project
+A}}). This ensure that both the researchers and software developers
+working upstream of the current project are properly credited,
+encouraging future sharing and development. Remember, the people who
+did the research are not necessarily the same people as the developers
+and maintainers of the software, so it is important to reward both
+appropriately with citations (a good way of doing this is the use of
+CITATION
+files~\footnote{\url{http://blog.rtwilson.com/encouraging-citation-of-software-introducing-citation-files/}}).
 
 
 \section{YMMV}
