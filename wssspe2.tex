@@ -377,16 +377,30 @@ the VM spot market. The web is a great leveller.
 \section{Conclusion}
 \label{sec:Conclusion} 
 
-ToDO 
+Suppose you have come up with a better algorithm to deal with some
+standard problem.  You write up the paper on the algorithm, and you
+also push an C++ implementation of your algorithm to the WSSSPE
+Cloud's section on this standard problem.
 
-Bring all of the above together into an open, always-active (so always
-working) Continuous Integration system for tools. 
+The effect of pushing your implementation is to register your program
+as a possible competitor in this standard problem competition. There
+are several dozen widely-agreed tests on this problem already on the
+WSSSPE Cloud's database. Maybe, after some negotiation becaues your
+angle on this standard problem is a bit novel, you add some of your
+own tests to the database too. 
 
-main proposal: automatic online dependency/build/traffic light system
-with GitHub hooks?
+Pushing your code up activates the Cloud's Continuous Integration
+system.  The cloud pulls in all the dependencies your code needs, on
+the platforms you specify, and runs all the benchmarks. This happens
+every time you push. It also happens every time one of your
+dependencies (a library, a firmware upgrade for your platform, a new
+API) changes too.
 
-more main proposal: a lineage of the software (history/branches) and a
-(more limited) lineage of the algorithm its built on
+The proposal above brings together almost all of the points we've
+discussed in this paper. There are already several web services that
+nearly do this. Something more complete would mean that your code
+would never bit-rot, and no one would have problems reproducing the
+implementation of your published algorithm.
 
 
 
