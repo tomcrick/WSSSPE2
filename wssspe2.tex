@@ -92,10 +92,11 @@ with new models being
 proposed~\cite{stodden-et-al:2013,fursin+dubach:2014}.  There are
 numerous non-technical impediments to making software maintainable and
 re-useable, too. The pressure to ``make the discovery'' and publish
-quickly disincentivises careful software development. Releasing
-code prematurely is often seen to give your competitors an
-advantage, but we should be shining light into these ``black
-boxes''~\cite{morin-et-al:2012}.
+quickly disincentivises careful software development. Releasing code
+prematurely is often seen to give your competitors an advantage, but
+we should be shining light into these ``black
+boxes''~\cite{morin-et-al:2012}. In essence: better software, better
+research~\cite{goble:2014}.
 
 Things can and should be much better. In this paper, we present a call
 to action with a set of recommendations which we hope will lead to
@@ -105,11 +106,11 @@ and engineering.  The basis for many of these recommendations is the
 basic scientific tenet of openness. There has been previous work in
 this area~\cite{sim-et-al:2003,chirigati-et-al:2013}, as well as a
 range of manifestos for reproducible research and community
-initiatives, such as cTuning~\footnote{\url{http://ctuning.org/}} and
+initiatives, such as cTuning\footnote{\url{http://ctuning.org/}} and
 the Recomputation
-Manifesto~\cite{gent:2013}~\footnote{\url{http://www.recomputation.org/}},
+Manifesto~\cite{gent:2013}\footnote{\url{http://www.recomputation.org/}},
 along with curated recommendations on where to publish research
-software~\footnote{\url{http://www.software.ac.uk/resources/guides/which-journals-should-i-publish-my-software}}.
+software\footnote{\url{http://www.software.ac.uk/resources/guides/which-journals-should-i-publish-my-software}}.
 
 \section{Can I implement your algorithm?}
 
@@ -119,7 +120,7 @@ hand-wavey to allow an easy implementation by a third party. A line in
 the algorithm might say: ``We pick an element from the frontier set''
 but which element do you pick? Will the first one do? Why will any
 element suffice? Sometimes the author would like to give more
-implementation detail but is constrained by the the paper page
+implementation detail but is constrained by the paper page
 limit. Sometimes the authors' description in-lines other algorithms or
 data structures that perhaps only that author is familiar with.
 
@@ -136,16 +137,17 @@ There can be no better proof that your algorithm works, than if you
 provide the source code of an implementation. Software development is
 hard, but sharing and using others code is relatively easy.
 
-A long time ago, Richard Stallman imagined that all code would be free
-and we would make our money by consulting on the code.
-Somewhat ironically, this is the case for a significant part of the
-computing industry now. There are, of course, hard commercial
-pressures for keeping code closed-source. Even in the scientific
-domain, scientists and their collaborators may wish to hold onto their
-code as a competitive advantage, especially if there exists larger
-competitors who could use the available code to ``reverse scoop'' the
-inventors, charging into a promising new research area opened by the
-inventors.
+A long time ago, Richard Stallman (founder of the GNU Project and Free
+Software Foundation) imagined that all code would be
+free\footnote{\url{http://www.gnu.org/philosophy/shouldbefree.html}}
+and we would make our money by consulting on the code.  Somewhat
+ironically, this is the case for a significant part of the computing
+industry now. There are, of course, hard commercial pressures for
+keeping code closed-source. Even in the scientific domain, scientists
+and their collaborators may wish to hold onto their code as a
+competitive advantage, especially if there exists larger competitors
+who could use the available code to ``reverse scoop'' the inventors,
+charging into a promising new research area opened by the inventors.
 
 Closed source is one thing. Licenses that deny the user from viewing,
 modifying, or sharing the source are another thing. There are, however, even
@@ -173,7 +175,7 @@ in the field much more than before~\cite{deMoura2012Z3open}.
 Ultimately: set the code free. Put it on a public space such as GitHub, where it
 is easy to share and fork. You should embrace the spirit of the CRAPL
 academic-strength open source
-license~\footnote{\url{http://matt.might.net/articles/crapl/}} and
+license\footnote{\url{http://matt.might.net/articles/crapl/}} and
 publish your code -- it is good enough~\cite{barnes:2010}.
 
 
@@ -181,10 +183,10 @@ publish your code -- it is good enough~\cite{barnes:2010}.
 
 If you have the skills and the experience, you can create better
 software. We have seen the emergence of initiatives, such as the Software
-Carpentry~\footnote{\url{http://software-carpentry.org/}}, Software
-Sustainability Institute~\footnote{\url{http://www.software.ac.uk/}}
+Carpentry\footnote{\url{http://software-carpentry.org/}}, Software
+Sustainability Institute\footnote{\url{http://www.software.ac.uk/}}
 and the UK Community of Research Software
-Engineers~\footnote{\url{http://www.rse.ac.uk}} to cultivate
+Engineers\footnote{\url{http://www.rse.ac.uk}} to cultivate
 world-class research through software, develop software skills and
 raise the profile of research software engineers.
 
@@ -192,7 +194,7 @@ Some scientists may not have had any formal, or even informal,
 training in programming. Even basic training in software engineering
 concepts like version control, unit testing, etc, can help improve the
 quality of the software written
-enormously~\cite{Wilson2014}~\footnote{Also see:
+enormously\cite{Wilson2014}\footnote{Also see:
 \url{http://philipwfowler.wordpress.com/2013/12/19/the-oxford-software-carpentry-boot-camp-one-year-on/}}.
 Interestingly, many of these concepts are taught to computer science
 undergraduates, but it could be argued that they are taught at the
@@ -218,13 +220,13 @@ language to write your software in helps hugely with the
 maintainability and robustness of the software produced. Such
 programming languages impose constraints like types: that you can
 never add a number and a string is the most basic example, but ML's
-functors provide princpled ways of plugging in components with their
+functors provide principled ways of plugging in components with their
 implementations completely hidden. Aggressive type checking avoids a
 subset of bugs which can arise due to incorrectly written functions
-e.g. well publicised NASA problems with a Mars orbiter~\footnote{See:
+e.g. well publicised NASA problems with a Mars orbiter\footnote{See:
 \url{http://www.cnn.com/TECH/space/9909/30/mars.metric.02/}}.  A
 further example is a pressure coupling
-bug~\footnote{\url{http://redmine.gromacs.org/issues/14}} in
+bug\footnote{\url{http://redmine.gromacs.org/issues/14}} in
 GROMACS~\cite{Hess2008}, which arose due to the inappropriate swapping
 of a pressure term with a stress tensor.  A further extension of
 types, a concept called units of measure that is implemented in
@@ -283,7 +285,7 @@ did the research are not necessarily the same people as the developers
 and maintainers of the software, so it is important to reward both
 appropriately with citations (a good way of doing this is the use of
 CITATION
-files~\footnote{\url{http://blog.rtwilson.com/encouraging-citation-of-software-introducing-citation-files/}}).
+files\footnote{\url{http://blog.rtwilson.com/encouraging-citation-of-software-introducing-citation-files/}}).
 
 
 \section{YMMV}
@@ -325,7 +327,7 @@ We often do not, and should not care how things are stored on disk,
 what their precise representations are. But a common, constrained, standard
 representation is good for passing tests or models around between
 different tools. A properly described representation, like the SMT-LIB
-format~\footnote{\url{http://smt-lib.org}} for SAT Modulo Theory
+format\footnote{\url{http://smt-lib.org}} for SAT Modulo Theory
 solvers, where both the syntax and semantics are well understood, aids
 hugely in developing tools, techniques, benchmarks.
 
@@ -343,9 +345,9 @@ parameters limiting the possibility for error.
 
 The benchmarks the tool describes are fashioned only for this instance
 of this time. They might claim to be from the Windows device driver
-set, but the reality is that they are are stripped down versions of
-the originals. Stripped down so much as to be useless to anyone but
-the author vs. the referee. It is worse than that really: enough
+set, but the reality is that they are stripped down versions of the
+originals. Stripped down so much as to be useless to anyone but the
+author vs. the referee. It is worse than that really: enough
 benchmarks are included to beat other tools. The comparisons are never
 fair (neither are other peoples' comparisons against your tool). If
 every paper has to be novel, then every benchmark, too, will be novel;
@@ -362,7 +364,7 @@ justified. Papers should be penalised if they do not use these public
 benchmarks.
 
 A good example of some of these points is the RCSB Protein Data
-Bank~\footnote{\url{http://www.pdb.org}} and Systems Biology Markup
+Bank\footnote{\url{http://www.pdb.org}} and Systems Biology Markup
 Language~\cite{Hucka2003,Chaouiya2013}. The software ones we know of,
 the SMT Competition and the SV-COMP ones~\cite{SMTComp2014,
 SVCOMP2015}, are on that journey. Such repositories would allow the
@@ -376,8 +378,8 @@ interface to your tool and its tests will allow users who are not able
 to install necessary dependencies to explore the running of the tool
 \cite{Hall2014}. Ultimately, this can lead to making an ``executable
 paper'' appear on the internet. The interactive {\em Try
-F\#}~\footnote{\url{http://www.tryfsharp.org/Learn}} and Z3
-tutorials~\footnote{\url{http://rise4fun.com/Z3/tutorial/guide}} are a
+F\#}\footnote{\url{http://www.tryfsharp.org/Learn}} and Z3
+tutorials\footnote{\url{http://rise4fun.com/Z3/tutorial/guide}} are a
 great start that begin to expose what can be done in this area.
 % removed: ~\cite{tryFsharp} ~\cite{Z3tutorial}
 
