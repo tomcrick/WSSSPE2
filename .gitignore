@@ -1,0 +1,26 @@
+## Core pdflatex auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.synctex.gz
+
+## Bibliographic auxiliary files
+
+*.bbl
+*.bcf
+*.blg
+*.brf
+
+## Beamer
+
+*.nav
+*.snm
+*.vrb
+
+## Other
+*.tmp
+.DS_Store
