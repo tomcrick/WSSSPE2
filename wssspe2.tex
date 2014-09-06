@@ -1,36 +1,36 @@
-\documentclass[conference]{IEEEtran}
+\documentclass[10pt,conference,final]{IEEEtran}
 \usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
 
 \usepackage[british]{babel}
 \usepackage[hyphens]{url}
+\usepackage{paralist}
 \usepackage{graphicx}
 \usepackage[noadjust]{cite}
 \usepackage[pdftex,colorlinks=true]{hyperref}
 
+\IEEEoverridecommandlockouts
+
 \begin{document}
 \bstctlcite{IEEEexample:BSTcontrol}
 
-% still not happy with the title...
+% title
 \title{``Can I Implement Your Algorithm?'':\\ A Model for Reproducible Research Software}
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Tom Crick}
+\author{\IEEEauthorblockN{Tom Crick\thanks{Tom Crick would like to
+      acknowledge financial support from the Software Sustainability
+      Institute as a 2014 Fellow.}}
 \IEEEauthorblockA{Department of Computing\\
 Cardiff Metropolitan University\\
 Cardiff, UK\\
 Email: {\url{tcrick@cardiffmet.ac.uk}}}
 \and
-\IEEEauthorblockN{Benjamin A. Hall}
+\IEEEauthorblockN{Benjamin A. Hall and Samin Ishtiaq}
 \IEEEauthorblockA{Microsoft Research\\
 Cambridge, UK\\
-Email: {\url{benhall@microsoft.com}}}
-\and
-\IEEEauthorblockN{Samin Ishtiaq}
-\IEEEauthorblockA{Microsoft Research\\
-Cambridge, UK\\
-Email: {\url{samin.ishtiaq@microsoft.com}}} }
+Email: {\url{{benhall,samin.ishtiaq}@microsoft.com}}}}
 
 \maketitle
 
@@ -77,13 +77,13 @@ re-useable.
 
 However, if we want to be truthful about this, then the scientific
 literature related to software tools often do not appear to be
-adhering to the rules themselves~\cite{nature:2011}. How many of them are
-reproducible? How many explain their experimental methodologies, in
-particular the basis for their benchmarking? In particular, can we build the
-code?~\cite{collberg-et-al:2014} We, the authors, are as guilty as
-anyone in the past, where we have succumbed to publishing
-papers~\cite{crick-et-al:2009,Berdine2011SLAyer} with benchmarks and
-promises of code to be released in the near future.
+adhering to the rules themselves~\cite{nature:2011}. How many of them
+are reproducible? How many explain their experimental methodologies,
+in particular the basis for their benchmarking? In particular, can we
+build the code~\cite{collberg-et-al:2014}? We, the authors, are
+perhaps as guilty as anyone in the past, where we have succumbed to
+publishing papers~\cite{crick-et-al:2009,Berdine2011SLAyer} with
+benchmarks and promises of code to be released in the near future.
 
 There are many reasons why the wider scientific community is in this
 state. We are experiencing significant changes in academic
@@ -137,8 +137,9 @@ There can be no better proof that your algorithm works, than if you
 provide the source code of an implementation. Software development is
 hard, but sharing and using others code is relatively easy.
 
+% how long? change link to ref?
 A long time ago, Richard Stallman (founder of the GNU Project and Free
-Software Foundation) imagined that all code would be
+Software Foundation) postulated that all code would be
 free\footnote{\url{http://www.gnu.org/philosophy/shouldbefree.html}}
 and we would make our money by consulting on the code.  Somewhat
 ironically, this is the case for a significant part of the computing
@@ -307,18 +308,19 @@ month's time.
 Providing the source code of the tool helps with this, of course. But
 you must also provide details of precisely \emph{how} you built and
 wrote the software:
-%
-you should provide the compiler and build toolchain; 
-%
-you should provide builds tools/Makefiles/Ant/etc and build instructions; 
-%
-you should list or link to all non-standard packages and libraries that you use; 
-%
-you should note the specifics of the hardware and OS used. 
-%
-This sounds like a lot of work, but GitHub APIs, Continuous
-Integration servers, VMs and cloud environments can make it easier; see
-Section~\ref{sec:Conclusion} at the end for more on this.
+
+\begin{compactitem}
+\item you should provide the compiler and build toolchain; 
+\item you should provide build tools (e.g. Makefiles/Ant/etc) and
+  comprehensive build instructions; 
+\item you should list or link to all non-standard packages and libraries that you use; 
+\item you should note the specifics of the hardware and OS used. 
+\end{compactitem}
+
+This may appear to be significant extra overhead for researchers, but
+GitHub APIs, Continuous Integration servers, VMs and cloud
+environments can make it easier; see Section~\ref{sec:Conclusion} at
+the end for more on this.
 
 
 \section{Forms of representation}
