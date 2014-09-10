@@ -106,7 +106,7 @@ and engineering.  The basis for many of these recommendations is the
 basic scientific tenet of openness. There has been previous work in
 this area~\cite{sim-et-al:2003,chirigati-et-al:2013}, as well as a
 range of manifestos for reproducible research and community
-initiatives, such as cTuning\footnote{\url{http://ctuning.org/}} and
+initiatives, such as cTuning~\cite{fursin-et-al:2014}\footnote{\url{http://ctuning.org/}} and
 the Recomputation
 Manifesto~\cite{gent:2013}\footnote{\url{http://www.recomputation.org/}},
 along with curated recommendations on where to publish research
@@ -194,13 +194,12 @@ raise the profile of research software engineers.
 Some scientists may not have had any formal, or even informal,
 training in programming. Even basic training in software engineering
 concepts like version control, unit testing, etc, can help improve the
-quality of the software written
-enormously\cite{Wilson2014}\footnote{Also see:
-\url{http://philipwfowler.wordpress.com/2013/12/19/the-oxford-software-carpentry-boot-camp-one-year-on/}}.
+quality of the software written enormously~\cite{wilson2006}.
 Interestingly, many of these concepts are taught to computer science
 undergraduates, but it could be argued that they are taught at the
 wrong time of the engineers' careers, where the importance of complex,
 long-running projects is not yet appreciated.
+%\footnote{Also see: \url{http://philipwfowler.wordpress.com/2013/12/19/the-oxford-software-carpentry-boot-camp-one-year-on/}}.
 
 These should be regarded as fundamental literacies for scientists and
 engineers: we recommend that basic programming and computational
@@ -294,16 +293,15 @@ files\footnote{\url{http://blog.rtwilson.com/encouraging-citation-of-software-in
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{overlyhonesttweet.png}
-\caption{An \#overlyhonestmethod\newline [source: \url{https://twitter.com/ianholmes/status/288689712636493824}]}
+\caption{An {\texttt{\#overlyhonestmethod}}\newline [source: \url{https://twitter.com/ianholmes/status/288689712636493824}]}
 \label{fig:overlyhonestmethod} 
 \end{figure}
 
-The tweet is Figure~\ref{fig:overlyhonestmethod} is funny because it
-is worryingly true. Often, the tool that the paper describes does not
-exist for download. Or runs only on one particular bespoke
-platform. Or might run for the author, for a while, but will bit-rot
-so quickly that even the author cannot compile it in a couple of
-month's time.
+The tweet in Figure~\ref{fig:overlyhonestmethod} is sad but worryingly
+true. Often, the tool that the paper describes does not exist for
+download. Or runs only on one particular bespoke platform. Or might
+run for the author, for a while, but will `bit-rot' so quickly that even
+the author cannot compile it in a couple of month's time.
 
 Providing the source code of the tool helps with this, of course. But
 you must also provide details of precisely \emph{how} you built and
@@ -334,13 +332,13 @@ solvers, where both the syntax and semantics are well understood, aids
 hugely in developing tools, techniques, benchmarks.
 
 Another example, from biology, is that of the standard representation
-of qualitative networks (QN) and Boolean
-networks (BN)~\cite{Kauffman1969,Schaub2007}.  These networks can be
-expressed in SMV format, but this would mean that standard QN and BN
-behaviours have to be hard-coded for each variable, introducing the
-possibility for errors. In the BioModelAnalyzer
-tool~\cite{Benque2012}, the XML contains \emph{only} the modifiable
-parameters limiting the possibility for error.
+of qualitative networks and Boolean
+networks~\cite{Kauffman1969,Schaub2007}.  These networks can be
+expressed in SMV format, but this would mean that standard
+qualitative/Boolean network behaviours have to be hard-coded for each
+variable, introducing the possibility for errors. In the
+BioModelAnalyzer tool~\cite{Benque2012}, the XML contains \emph{only}
+the modifiable parameters limiting the possibility for error.
 
 
 \section{9.63sec} 
@@ -367,10 +365,14 @@ benchmarks.
 
 A good example of some of these points is the RCSB Protein Data
 Bank\footnote{\url{http://www.pdb.org}} and Systems Biology Markup
-Language~\cite{Hucka2003,Chaouiya2013}. The software ones we know of,
-the SMT Competition and the SV-COMP ones~\cite{SMTComp2014,
-SVCOMP2015}, are on that journey. Such repositories would allow the
-tests to be taken and easily analysed by any competitor tool.
+Language~\cite{Chaouiya2013}. The software ones we know of,
+the SMT
+Competition\footnote{\url{http://smtcomp.sourceforge.net/2014/}},
+SV-COMP\footnote{\url{http://sv-comp.sosy-lab.org/2015/}} and
+Termination Problems Data
+Base\footnote{\url{http://termination-portal.org/wiki/TPDB}} are on
+that journey. Such repositories would allow the tests to be taken and
+easily analysed by any competitor tool.
 
 \section{Welcome to Web 2.0} 
 
@@ -421,7 +423,7 @@ The proposal above brings together almost all of the points we have
 discussed in this paper. There are already several web services that
 nearly do this. Something more complete, and stamped with the
 authority of the major conferences or journals, would mean that your
-code would never bit-rot, and no one would have problems reproducing
+code would never `bit-rot', and no one would have problems reproducing
 the implementation of your published algorithm.
 
 

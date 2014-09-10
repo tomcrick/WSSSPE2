@@ -1,0 +1,97 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 18
+TITLE: "Can I Implement Your Algorithm?": A Model for Reproducible Research Software
+AUTHORS: Tom Crick, Benjamin A. Hall and Samin Ishtiaq
+
+OVERALL EVALUATION: 2 (strong accept)
+REVIEWER'S CONFIDENCE: 4 (high)
+Relevance to WSSSPE: 4 (excellent)
+Action-orientation (will lead to actions?): 4 (excellent)
+Should this paper author give a plenary talk?: 2 (yes)
+
+----------- REVIEW -----------
+This paper is a list of suggestions for making scientific software more sustainable. It is a well compiled list of topics and actions that can help improve software engineering for science.
+
+Even though the individual suggestions are not novel or surprising in themselves, they are a good contribution to the workshop and an actionable guideline.
+
+The paper is written in a very colloquial style, which is not appropriate for a scientific paper, but it is easy to read and follow and I expect the authors would certainly give a good plenary talk that stimulates discussion at the workshop.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 18
+TITLE: "Can I Implement Your Algorithm?": A Model for Reproducible Research Software
+AUTHORS: Tom Crick, Benjamin A. Hall and Samin Ishtiaq
+
+OVERALL EVALUATION: 1 (weak accept)
+REVIEWER'S CONFIDENCE: 3 (medium)
+Relevance to WSSSPE: 2 (fair)
+Action-orientation (will lead to actions?): 2 (fair)
+Should this paper author give a plenary talk?: 1 (no)
+
+----------- REVIEW -----------
+This is a paper worth reading, a compendium of several good "no-nonsense" advises. Good run-down of examples of common HPC applications and their various license models, anecdotes about code problems pitfalls. Offers some practical recipes of how to do it better, but it is a rather non-systematic collection of suggestions. Not a breakthrough in any way.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 18
+TITLE: "Can I Implement Your Algorithm?": A Model for Reproducible Research Software
+AUTHORS: Tom Crick, Benjamin A. Hall and Samin Ishtiaq
+
+OVERALL EVALUATION: -1 (weak reject)
+REVIEWER'S CONFIDENCE: 4 (high)
+Relevance to WSSSPE: 4 (excellent)
+Action-orientation (will lead to actions?): 2 (fair)
+Should this paper author give a plenary talk?: 1 (no)
+
+----------- REVIEW -----------
+This paper is something of a mixed bag. It is very promising in the beginning, and includes some good ideas and useful experiences, but later parts do not seem so well thought through. The use of several unexplained acronyms also assumes that the reader is from a particular community when WSSSPE2 readers may come from a wide range of backgrounds.
+
+I believe that some of the ideas in the paper might be of interest to conference delegates, but if accepted the authors should do more to think about how they will communicate their ideas and what evidence they have to indicate that their proposals may be successful.
+
+Specific comments:
+
+p1 col 2 the proposal for a re-implementation track is interesting, have you tried to make this work?
+
+p2 col 1 Define acronyms such as GROMACS, CHARMM, and explain licenses such as MRS-LA and CRAPL  (even LGPL may be a bit subtle so best to explain).
+
+p2 col 2 Section V is loosely worded as if it was written at the last minute without much thought. The co-authors should tighten this so it makes sense and isn't just "man down the pub" speculation.
+
+Sectoin IV is unclear (e.g. "link from shared code"?)
+
+p3 col 2  More acronyms SMT-LIB and SAT etc need explaining. Section IX paragraph 2 is particularly unhelpful to anyone out of the field.
+
+Section X The wording seems to be making this accessible but it ends up coming across as sloppy wording which is not thought out.
+
+How will you penalize papers that do not use public benchmarks? And will that not limit research questions to things that others have already asked?
+
+Section XII is not really conclusions, but speculations on things you would like to see. Where is your evidence to suggest that any of these things might even work?
+
+
+----------------------- REVIEW 4 ---------------------
+PAPER: 18
+TITLE: "Can I Implement Your Algorithm?": A Model for Reproducible Research Software
+AUTHORS: Tom Crick, Benjamin A. Hall and Samin Ishtiaq
+
+OVERALL EVALUATION: -1 (weak reject)
+REVIEWER'S CONFIDENCE: 4 (high)
+Relevance to WSSSPE: 2 (fair)
+Action-orientation (will lead to actions?): 1 (poor)
+Should this paper author give a plenary talk?: 1 (no)
+
+----------- REVIEW -----------
+In this paper, authors propose a new open platform for scientific development where scientists can share software which are based on recent novel algorithms. It seems there are many such sites. What authors are mentioning in this paper is correct, but not a new idea.
+
+
+----------------------- REVIEW 5 ---------------------
+PAPER: 18
+TITLE: "Can I Implement Your Algorithm?": A Model for Reproducible Research Software
+AUTHORS: Tom Crick, Benjamin A. Hall and Samin Ishtiaq
+
+OVERALL EVALUATION: -2 (strong reject)
+REVIEWER'S CONFIDENCE: 2 (low)
+Relevance to WSSSPE: 2 (fair)
+Action-orientation (will lead to actions?): 1 (poor)
+Should this paper author give a plenary talk?: 1 (no)
+
+----------- REVIEW -----------
+Whilst I agree with what the authors have written in this article, it fails to present anything new, and the recommendations are tilted quite heavily towards broad generalisations and assertions. This reads slightly too editorial and as scene-setting for the conference, with some of the subsections lacking a clear narrative path and tie-in.
