@@ -158,7 +158,7 @@ hard, but sharing and re-using code is relatively easy.
 Many years ago, Richard Stallman (founder of the GNU Project and Free
 Software Foundation) postulated that all code would be
 free~\cite{rms:2010} and we would make our money by consulting on the
-code.  Somewhat ironically, this is now the case for a significant
+code.  As it turns out, this is now the case for a significant
 part of the computing industry. There are, of course, hard commercial
 pressures for keeping code closed-source. Even in the scientific
 domain, scientists and their collaborators may wish to hold onto their
@@ -177,7 +177,7 @@ openness (GROMACS uses the GNU Lesser General Public License
 (LGPL)~\cite{Hess2008}, CHARMM and Desmond are Academic/Commercial
 software licences~\cite{Brooks2009,Bowers2006}, Amber and NAMD are
 custom open-like licences). Z3 is an example from the verification
-area: the code itself is not open source, but the MSR-LA that allows
+area: the code itself is not open source, but the MSR-LA license that allows
 the source code to be read, copied, forked for academic use, provides
 researchers in the field much more than
 before~\cite{deMoura2012Z3open}.
@@ -241,7 +241,7 @@ disadvantages.
 High-level languages are generally more readable than their
 competitors. The ``density'' of a program is often seen to be a good
 thing, but it is not always the case that a shorter Haskell program
-(for example) is better to maintain than longer Python/C++
+(for example) is easier to maintain than a longer Python/C++
 one. Nevertheless, what is important is the readability of the code
 itself. A good example here is from the world of automatic theorem
 proving: the SSReflect language is much more readable than the
@@ -252,7 +252,7 @@ numbered.  Even though these proof scripts are really only ever going
 to be run by a machine, they seek to maintain the basic mathematical
 idea that a proof should be readable by another mathematician.
 
-Such programming generally languages impose constraints like types: that you can
+High-level programming languages impose constraints like types: that you can
 never add a number and a string is the most basic example, but ML's
 functors provide principled ways of plugging in components with their
 implementations completely hidden. Aggressive type checking avoids a
