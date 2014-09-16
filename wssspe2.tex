@@ -295,7 +295,7 @@ simulations due to the differing order in which forces were summed.
 challenges to testing, unshared code is ultimately untestable.
 Testing new complex scientific software is difficult -- until the
 software is complete, unit tests may not be available. You should thus
-always link from shared code: shared code is inherently more
+aim to link to/from publicly-shared code: shared code is inherently more
 test-able.
 
 % Recommendation VI
@@ -361,9 +361,10 @@ We often do not, and should not, care how things are stored on disk,
 what their precise representations are. But a common, constrained,
 standard representation is good for passing tests or models around
 between different tools. A properly described representation, like the
-SMT-LIB format\footnote{\url{http://smt-lib.org}} for SAT Modulo
-Theory (SMT) solvers, where both the syntax and semantics are well
-understood, hugely aids developing tools, techniques and benchmarks.
+SMT-LIB format\footnote{\url{http://smt-lib.org}} for Satisfiability
+Modulo Theory (SMT) solvers, where both the syntax and semantics are
+well understood, hugely aids developing tools, techniques and
+benchmarks.
 
 Another example, from biology, is that of the standard representation
 of qualitative networks and Boolean
@@ -401,7 +402,10 @@ excess weight. Given this set up, you could surely hope to beat his
 be public. They should allow anyone to contribute, implying that the
 tests are in a standard format. Further, these benchmarks must be
 heavily curated. Every test/assertion should be justified. Papers
-should be penalised if they do not use these public benchmarks.
+should be penalised if they do not use these public benchmarks. While
+there are some domains in which it may not be immediately possible to
+share full benchmarks sets, this should be the exception (with
+justification) rather than the norm.
 
 A good example of some of these points is the RCSB Protein Data
 Bank\footnote{\url{http://www.pdb.org}} and Systems Biology Markup
@@ -463,9 +467,10 @@ API) changes too.
 
 If we are truly serious about addressing the systemic socio-technical
 issues in scientific disciplines that are underpinned by leveraging
-software and computational techniques, then the proposal above brings
-together almost all of the points we have discussed in this
-paper. There are already several web services that nearly do
+software and computational techniques, then the proposal above would
+bring together almost all of the points we have discussed in this
+paper to provide an open research infrastructure for all. There are
+already several web services that nearly do a number of part of
 this. Something more complete, and stamped with the authority of the
 major domain conferences/journals/professional societies, would mean
 that your code would never `bit-rot', and no one would have problems
@@ -476,7 +481,7 @@ reproducing the implementation of your published algorithm.
 % number - used to balance the columns on the last page
 % adjust value as needed - may need to be readjusted if
 % the document is modified later
-\IEEEtriggeratref{28}
+\IEEEtriggeratref{27}
 % The "triggered" command can be changed if desired:
 %\IEEEtriggercmd{\enlargethispage{-5in}}
 
